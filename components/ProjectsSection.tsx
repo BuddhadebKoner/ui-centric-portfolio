@@ -9,6 +9,7 @@ import {
    type CarouselApi,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import Link from "next/link";
 
 const projects = [
    {
@@ -89,7 +90,7 @@ export default function ProjectsSection() {
                         across various technologies.
                      </p>
                   </div>
-                  <a
+                  <Link
                      href="/projects"
                      className="hidden sm:inline-flex items-center gap-2 px-6 py-3 bg-card/80 backdrop-blur-sm border border-border text-foreground rounded-lg font-medium hover:bg-card hover:border-highlight transition-all"
                   >
@@ -107,7 +108,7 @@ export default function ProjectsSection() {
                            d="M9 5l7 7-7 7"
                         />
                      </svg>
-                  </a>
+                  </Link>
                </div>
             </div>
 
