@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import SubHero from "@/components/SubHero";
@@ -7,6 +8,23 @@ import CardsSection from "@/components/CardsSection";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
 import LandingPagesSection from "@/components/LandingPagesSection";
+
+export const metadata: Metadata = {
+  title: "Home - Buddhadeb Koner | FullStack Web Developer",
+  description:
+    "Welcome to the personal portfolio of Buddhadeb Koner, a creative FullStack Web Developer specializing in MERN stack and Next.js. Explore projects, skills, and contact information.",
+  openGraph: {
+    title: "Home - Buddhadeb Koner | FullStack Web Developer",
+    description:
+      "Welcome to the personal portfolio of Buddhadeb Koner, a creative FullStack Web Developer producing great software.",
+    url: "https://buddhadebkoner.vercel.app/",
+  },
+  twitter: {
+    title: "Home - Buddhadeb Koner | FullStack Web Developer",
+    description:
+      "Welcome to the personal portfolio of Buddhadeb Koner, a creative FullStack Web Developer producing great software.",
+  },
+};
 
 export default function Home() {
   return (

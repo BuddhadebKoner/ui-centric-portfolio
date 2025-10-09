@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://buddhadebkoner.vercel.app
+
+# Sitemaps
+Sitemap: https://buddhadebkoner.vercel.app/sitemap.xml
