@@ -91,7 +91,7 @@ export default function EventsPage() {
                   </Link>
                   <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">All Events</h1>
                   <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
-                     Talks, workshops and community meetups I've organized or attended.
+                     Talks, workshops and community meetups I&apos;ve organized or attended.
                   </p>
                </div>
 

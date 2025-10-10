@@ -66,7 +66,7 @@ export default function EventsSection() {
                <div>
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">Events & Workshops</h2>
                   <p className="text-sm sm:text-base md:text-lg text-muted-foreground mt-2">
-                     Highlights of events I've conducted or participated in — talks, workshops and community meetups.
+                     Highlights of events I&apos;ve conducted or participated in — talks, workshops and community meetups.
                   </p>
                </div>
                <Link

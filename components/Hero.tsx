@@ -79,10 +79,10 @@ export default function Hero() {
                         <DialogContent className="sm:max-w-[500px] bg-background/95 backdrop-blur-md border-border">
                            <DialogHeader>
                               <DialogTitle className="text-2xl font-semibold text-foreground">
-                                 Let's Work Together
+                                 Let&apos;s Work Together
                               </DialogTitle>
                               <DialogDescription className="text-muted-foreground">
-                                 Fill out the form below and I'll get back to you as soon as possible.
+                                 Fill out the form below and I&apos;ll get back to you as soon as possible.
                               </DialogDescription>
                            </DialogHeader>
                            <form className="space-y-4 mt-4">
