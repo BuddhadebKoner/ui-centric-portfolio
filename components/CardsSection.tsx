@@ -65,10 +65,10 @@ export default function CardsSection() {
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Section Header */}
             <div className="mb-12">
-               <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
                   Tech Stack & Skills
                </h2>
-               <p className="text-lg text-muted-foreground max-w-3xl">
+               <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl">
                   A comprehensive toolkit for building modern web applications. From{" "}
                   <span className="text-highlight font-semibold">frontend interfaces to backend systems</span>
                   , I leverage cutting-edge technologies to deliver exceptional digital experiences.

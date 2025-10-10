@@ -52,6 +52,22 @@ const projects = [
       image: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1740969977/mern-blog/tdtyjvq7yq475tpwuy1a.png",
       tags: ["REACT", "Tailwind CSS", "TypeScript", "appWrite"],
    },
+   {
+      title: "Notes Doo",
+      description: "Notes sharing website — Share Knowledge, Excel Together.",
+      demoUrl: "https://notesdoo.vercel.app/",
+      sourceCodeUrl: "https://github.com/BuddhadebKoner/notes-do",
+      image: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1759997327/recentWork_tye4yp.png",
+      tags: ["Next.js", "Tailwind CSS", "TypeScript"],
+   },
+   {
+      title: "MongoDB Aggregation Pipeline",
+      description: "A focused learning environment to practice MongoDB aggregation pipelines with Users, Books, and Authors collections.",
+      demoUrl: "https://mongodb-aggregation-pipeline-prrp.vercel.app/",
+      sourceCodeUrl: "https://github.com/BuddhadebKoner/mongodb-aggregation-pipeline",
+      image: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1760068413/Screenshot_2025-10-10_at_09-23-19_Vite_React_vaapy0.png",
+      tags: ["MongoDB", "Aggregation", "Vite", "React"],
+   },
 ];
 
 import Navbar from "@/components/Navbar";
@@ -100,10 +116,10 @@ export default function ProjectsPage() {
                      </svg>
                      Back to Home
                   </Link>
-                  <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
                      All Projects
                   </h1>
-                  <p className="text-lg text-muted-foreground">
+                  <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
                      Discover my complete portfolio of{" "}
                      <span className="text-highlight font-medium">
                         innovative solutions

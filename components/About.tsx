@@ -31,10 +31,10 @@ export default function About() {
             <div className="space-y-12">
                {/* Header */}
                <div className="space-y-4">
-                  <h2 className="text-4xl sm:text-5xl font-bold text-foreground">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
                      About Me
                   </h2>
-                  <p className="text-lg text-muted-foreground leading-relaxed max-w-4xl">
+                  <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-4xl">
                      I am <span className="text-highlight font-semibold">Buddhadeb Koner</span>, a passionate FullStack Web Developer specializing in the MERN stack and Next.js. I continuously explore new technologies and frameworks to deliver innovative solutions. I am a dedicated problem solver who enjoys contributing to open-source projects and building modern, high-performance web applications.
                   </p>
                </div>

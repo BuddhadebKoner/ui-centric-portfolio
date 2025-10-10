@@ -30,6 +30,18 @@ const landingPages = [
       imageSrc: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1741678714/next-portfolio/works/zugytqjxnvodwx8cwrob.png",
       demoUrl: "https://buddhadebkoner.vercel.app/",
    },
+   {
+      title: "Notes Doo",
+      url: "notesdoo.vercel.app",
+      imageSrc: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1759997327/recentWork_tye4yp.png",
+      demoUrl: "https://notesdoo.vercel.app/",
+   },
+   {
+      title: "MongoDB Aggregation Pipeline",
+      url: "mongodb-aggregation-pipeline-prrp.vercel.app",
+      imageSrc: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1760068413/Screenshot_2025-10-10_at_09-23-19_Vite_React_vaapy0.png",
+      demoUrl: "https://mongodb-aggregation-pipeline-prrp.vercel.app/",
+   },
 ];
 
 export default function LandingPagesSection() {
@@ -49,10 +61,10 @@ export default function LandingPagesSection() {
             <div className="space-y-6 mb-12">
                <div className="flex items-center justify-between">
                   <div>
-                     <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
                         Popular Landing Pages
                      </h2>
-                     <p className="text-lg text-muted-foreground mt-2">
+                     <p className="text-sm sm:text-base md:text-lg text-muted-foreground mt-2">
                         Explore my{" "}
                         <span className="text-highlight font-medium">
                            featured landing page designs

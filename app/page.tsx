@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import SubHero from "@/components/SubHero";
+import EventsSection from "@/components/EventsSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import YouTubeSection from "@/components/YouTubeSection";
 import CardsSection from "@/components/CardsSection";
@@ -51,6 +52,7 @@ export default function Home() {
         <main className="min-h-screen pt-16">
           <Hero />
           <SubHero />
+          <EventsSection />
           <LandingPagesSection />
           <ProjectsSection />
           <YouTubeSection />

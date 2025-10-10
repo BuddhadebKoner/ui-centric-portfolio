@@ -54,10 +54,10 @@ export default function YouTubeSection() {
       <section className="py-20">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="space-y-6 mb-12">
-               <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
                   YouTube Videos
                </h2>
-               <p className="text-lg text-muted-foreground">
+               <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
                   Watch my{" "}
                   <span className="text-highlight font-medium">
                      tutorials and guides
