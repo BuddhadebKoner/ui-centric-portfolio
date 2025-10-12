@@ -7,13 +7,27 @@ function isValidEmail(email: string): boolean {
   return emailRegex.test(email);
 }
 
-// Create transporter
+// Create transporter with Brevo SMTP
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: process.env.SMTP_HOSTNAME,
+  port: Number(process.env.SMTP_PORT),
+  secure: false,
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: process.env.SMTP_USERNAME,
+    pass: process.env.SMTP_PASSWORD,
   },
+  tls: {
+    rejectUnauthorized: false,
+  },
+});
+
+// Verify the connection configuration
+transporter.verify(function (error: Error | null) {
+  if (error) {
+    console.error('SMTP connection error:', error);
+  } else {
+    console.log('SMTP server is ready to take our messages');
+  }
 });
 
 export async function POST(request: NextRequest) {
