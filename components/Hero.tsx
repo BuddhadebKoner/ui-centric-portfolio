@@ -13,6 +13,77 @@ import { useState } from "react";
 
 export default function Hero() {
    const [isDialogOpen, setIsDialogOpen] = useState(false);
+   const [isSubmitting, setIsSubmitting] = useState(false);
+   const [formData, setFormData] = useState({
+      name: "",
+      email: "",
+      mobile: "",
+      company: "",
+      message: "",
+      budget: "",
+      currency: "INR",
+   });
+   const [submitStatus, setSubmitStatus] = useState<{
+      type: "success" | "error" | null;
+      message: string;
+   }>({ type: null, message: "" });
+
+   const handleInputChange = (
+      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+   ) => {
+      const { id, value } = e.target;
+      setFormData((prev) => ({ ...prev, [id]: value }));
+   };
+
+   const handleSubmit = async (e: React.FormEvent) => {
+      e.preventDefault();
+      setIsSubmitting(true);
+      setSubmitStatus({ type: null, message: "" });
+
+      try {
+         const response = await fetch("/api/send-email", {
+            method: "POST",
+            headers: {
+               "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+         });
+
+         const data = await response.json();
+
+         if (response.ok) {
+            setSubmitStatus({
+               type: "success",
+               message: data.message || "Thank you! Your message has been received. If you don't receive a confirmation email within 5 minutes, please call directly at +91 9339813998.",
+            });
+            setFormData({
+               name: "",
+               email: "",
+               mobile: "",
+               company: "",
+               message: "",
+               budget: "",
+               currency: "INR",
+            });
+            setTimeout(() => {
+               setIsDialogOpen(false);
+               setSubmitStatus({ type: null, message: "" });
+            }, 5000); // Increased to 5 seconds to read the message
+         } else {
+            setSubmitStatus({
+               type: "error",
+               message: data.error || "Failed to send message. Please try again.",
+            });
+         }
+      } catch {
+         setSubmitStatus({
+            type: "error",
+            message: "An error occurred. Please call directly at +91 9339813998.",
+         });
+      } finally {
+         setIsSubmitting(false);
+      }
+   };
 
    return (
       <section id="hero" className="min-h-[80vh] flex items-center justify-center pt-16">
@@ -85,16 +156,45 @@ export default function Hero() {
                                  Fill out the form below and I&apos;ll get back to you as soon as possible.
                               </DialogDescription>
                            </DialogHeader>
-                           <form className="space-y-4 mt-4">
+
+                           {submitStatus.type && (
+                              <div
+                                 className={`p-4 rounded-lg ${submitStatus.type === "success"
+                                    ? "bg-green-500/10 border border-green-500/50 text-green-600 dark:text-green-400"
+                                    : "bg-red-500/10 border border-red-500/50 text-red-600 dark:text-red-400"
+                                    }`}
+                              >
+                                 <p className="font-medium">{submitStatus.message}</p>
+                                 {submitStatus.type === "success" && (
+                                    <p className="mt-2 text-sm opacity-90">
+                                       💡 Check your email for confirmation. For urgent queries, call:
+                                       <a href="tel:+919339813998" className="font-semibold underline ml-1">
+                                          +91 9339813998
+                                       </a>
+                                    </p>
+                                 )}
+                                 {submitStatus.type === "error" && (
+                                    <p className="mt-2 text-sm opacity-90">
+                                       📞 Direct contact:
+                                       <a href="tel:+919339813998" className="font-semibold underline ml-1">
+                                          +91 9339813998
+                                       </a>
+                                    </p>
+                                 )}
+                              </div>
+                           )}                           <form onSubmit={handleSubmit} className="space-y-4 mt-4">
                               {/* Name Field */}
                               <div className="space-y-2">
                                  <label htmlFor="name" className="text-sm font-medium text-foreground">
-                                    Full Name
+                                    Full Name <span className="text-red-500">*</span>
                                  </label>
                                  <input
                                     id="name"
                                     type="text"
                                     placeholder="John Doe"
+                                    value={formData.name}
+                                    onChange={handleInputChange}
+                                    required
                                     className="w-full px-4 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-highlight/50 transition-all"
                                  />
                               </div>
@@ -102,12 +202,31 @@ export default function Hero() {
                               {/* Email Field */}
                               <div className="space-y-2">
                                  <label htmlFor="email" className="text-sm font-medium text-foreground">
-                                    Email Address
+                                    Email Address <span className="text-red-500">*</span>
                                  </label>
                                  <input
                                     id="email"
                                     type="email"
                                     placeholder="john@example.com"
+                                    value={formData.email}
+                                    onChange={handleInputChange}
+                                    required
+                                    className="w-full px-4 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-highlight/50 transition-all"
+                                 />
+                              </div>
+
+                              {/* Mobile Number Field */}
+                              <div className="space-y-2">
+                                 <label htmlFor="mobile" className="text-sm font-medium text-foreground">
+                                    Mobile Number <span className="text-red-500">*</span>
+                                 </label>
+                                 <input
+                                    id="mobile"
+                                    type="tel"
+                                    placeholder="+91 9876543210"
+                                    value={formData.mobile}
+                                    onChange={handleInputChange}
+                                    required
                                     className="w-full px-4 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-highlight/50 transition-all"
                                  />
                               </div>
@@ -121,6 +240,8 @@ export default function Hero() {
                                     id="company"
                                     type="text"
                                     placeholder="Your Company"
+                                    value={formData.company}
+                                    onChange={handleInputChange}
                                     className="w-full px-4 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-highlight/50 transition-all"
                                  />
                               </div>
@@ -128,62 +249,53 @@ export default function Hero() {
                               {/* Project Details Field */}
                               <div className="space-y-2">
                                  <label htmlFor="message" className="text-sm font-medium text-foreground">
-                                    Project Details
+                                    Project Details <span className="text-red-500">*</span>
                                  </label>
                                  <textarea
                                     id="message"
                                     rows={4}
                                     placeholder="Tell me about your project..."
+                                    value={formData.message}
+                                    onChange={handleInputChange}
+                                    required
                                     className="w-full px-4 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-highlight/50 transition-all resize-none"
                                  />
                               </div>
 
-                              {/* Currency and Budget Field */}
-                              <div className="grid grid-cols-2 gap-3">
-                                 {/* Currency Selection */}
-                                 <div className="space-y-2">
-                                    <label htmlFor="currency" className="text-sm font-medium text-foreground">
-                                       Currency
-                                    </label>
-                                    <select
-                                       id="currency"
-                                       className="w-full px-4 py-2 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-highlight/50 transition-all"
-                                    >
-                                       <option value="USD">USD ($)</option>
-                                       <option value="INR">INR (₹)</option>
-                                    </select>
-                                 </div>
-
-                                 {/* Budget Range */}
-                                 <div className="space-y-2">
-                                    <label htmlFor="budget" className="text-sm font-medium text-foreground">
-                                       Budget Range
-                                    </label>
-                                    <select
-                                       id="budget"
-                                       className="w-full px-4 py-2 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-highlight/50 transition-all"
-                                    >
-                                       <option value="">Select range</option>
-                                       <option value="1000-5000">1K - 5K</option>
-                                       <option value="5000-10000">5K - 10K</option>
-                                       <option value="10000-25000">10K - 25K</option>
-                                       <option value="25000+">25K+</option>
-                                    </select>
-                                 </div>
+                              {/* Budget Field */}
+                              <div className="space-y-2">
+                                 <label htmlFor="budget" className="text-sm font-medium text-foreground">
+                                    Budget Range (INR)
+                                 </label>
+                                 <select
+                                    id="budget"
+                                    value={formData.budget}
+                                    onChange={handleInputChange}
+                                    className="w-full px-4 py-2 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-highlight/50 transition-all"
+                                 >
+                                    <option value="">Select range</option>
+                                    <option value="1,000-5,000">₹1,000 - ₹5,000</option>
+                                    <option value="5,000-10,000">₹5,000 - ₹10,000</option>
+                                    <option value="10,000-25,000">₹10,000 - ₹25,000</option>
+                                    <option value="25,000-50,000">₹25,000 - ₹50,000</option>
+                                    <option value="50,000+">₹50,000+</option>
+                                 </select>
                               </div>
 
                               {/* Submit Button */}
                               <div className="flex gap-3 pt-2">
                                  <button
                                     type="submit"
-                                    className="flex-1 px-6 py-3 bg-foreground text-background rounded-lg font-semibold hover:opacity-90 transition-all"
+                                    disabled={isSubmitting}
+                                    className="flex-1 px-6 py-3 bg-foreground text-background rounded-lg font-semibold hover:opacity-90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                                  >
-                                    Send Message
+                                    {isSubmitting ? "Sending..." : "Send Message"}
                                  </button>
                                  <button
                                     type="button"
                                     onClick={() => setIsDialogOpen(false)}
-                                    className="px-6 py-3 bg-transparent border border-border text-foreground rounded-lg font-semibold hover:bg-accent transition-all"
+                                    disabled={isSubmitting}
+                                    className="px-6 py-3 bg-transparent border border-border text-foreground rounded-lg font-semibold hover:bg-accent transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                                  >
                                     Cancel
                                  </button>
