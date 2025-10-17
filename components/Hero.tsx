@@ -9,9 +9,11 @@ import {
    DialogTitle,
    DialogTrigger,
 } from "@/components/ui/dialog";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import Crosshair from "@/components/Crosshair";
 
 export default function Hero() {
+   const heroContainerRef = useRef<HTMLElement>(null);
    const [isDialogOpen, setIsDialogOpen] = useState(false);
    const [isSubmitting, setIsSubmitting] = useState(false);
    const [formData, setFormData] = useState({
@@ -86,7 +88,8 @@ export default function Hero() {
    };
 
    return (
-      <section id="hero" className="min-h-[80vh] flex items-center justify-center pt-16">
+      <section ref={heroContainerRef} id="hero" className="min-h-[80vh] flex items-center justify-center pt-16 relative overflow-hidden">
+         <Crosshair containerRef={heroContainerRef} color="#ffffff" />
          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                {/* Left Content */}
