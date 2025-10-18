@@ -10,7 +10,6 @@ import {
    DialogTrigger,
 } from "@/components/ui/dialog";
 import { useState, useRef } from "react";
-import Crosshair from "@/components/Crosshair";
 
 export default function Hero() {
    const heroContainerRef = useRef<HTMLElement>(null);
