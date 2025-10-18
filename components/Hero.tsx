@@ -89,7 +89,7 @@ export default function Hero() {
 
    return (
       <section ref={heroContainerRef} id="hero" className="min-h-[80vh] flex items-center justify-center pt-16 relative overflow-hidden">
-         <Crosshair containerRef={heroContainerRef} color="#ffffff" />
+         {/* <Crosshair containerRef={heroContainerRef} color="#ffffff" /> */}
          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                {/* Left Content */}
@@ -185,7 +185,8 @@ export default function Hero() {
                                     </p>
                                  )}
                               </div>
-                           )}                           <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+                           )}
+                           <form onSubmit={handleSubmit} className="space-y-4 mt-4">
                               {/* Name Field */}
                               <div className="space-y-2">
                                  <label htmlFor="name" className="text-sm font-medium text-foreground">
