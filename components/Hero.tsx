@@ -10,9 +10,11 @@ import {
    DialogTrigger,
 } from "@/components/ui/dialog";
 import { useState, useRef } from "react";
+import { Volume2 } from "lucide-react";
 
 export default function Hero() {
    const heroContainerRef = useRef<HTMLElement>(null);
+   const audioRef = useRef<HTMLAudioElement>(null);
    const [isDialogOpen, setIsDialogOpen] = useState(false);
    const [isSubmitting, setIsSubmitting] = useState(false);
    const [formData, setFormData] = useState({
@@ -97,23 +99,12 @@ export default function Hero() {
                   <div className="inline-block">
                      <HoverBorderGradient
                         containerClassName="rounded-full"
-                        as="div"
-                        className="bg-background/50 backdrop-blur-sm text-muted-foreground flex items-center space-x-2 px-4 py-2"
+                        as="button"
+                        className="bg-background/50 backdrop-blur-sm text-foreground flex items-center space-x-2 px-4 py-2 cursor-pointer"
+                        onClick={() => audioRef.current?.play()}
                      >
-                        <svg
-                           className="h-3 w-3 text-highlight"
-                           fill="none"
-                           viewBox="0 0 24 24"
-                           stroke="currentColor"
-                        >
-                           <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M5 13l4 4L19 7"
-                           />
-                        </svg>
-                        <span className="text-sm">Available for Freelance Projects</span>
+                        <span className="text-sm">Buddhadeb Koner</span>
+                        <Volume2 className="h-5 w-5 text-highlight" />
                      </HoverBorderGradient>
                   </div>
 
@@ -343,6 +334,7 @@ export default function Hero() {
                </div>
             </div>
          </div>
+         <audio ref={audioRef} src="/buddhadebkoner.mp3" preload="auto" />
       </section>
    );
 }

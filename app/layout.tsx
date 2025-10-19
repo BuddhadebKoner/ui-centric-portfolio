@@ -147,8 +147,36 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
+        {/* Theme initialization script - runs before page render */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                function getThemeFromCookie() {
+                  const cookies = document.cookie.split('; ');
+                  const themeCookie = cookies.find(cookie => cookie.startsWith('theme='));
+                  return themeCookie ? themeCookie.split('=')[1] : null;
+                }
+                
+                function getSystemTheme() {
+                  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                }
+                
+                const savedTheme = getThemeFromCookie();
+                const theme = savedTheme || getSystemTheme();
+                
+                if (theme === 'dark') {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+              })();
+            `,
+          }}
+        />
+
         {/* JSON-LD Structured Data */}
         <Script
           id="json-ld"
