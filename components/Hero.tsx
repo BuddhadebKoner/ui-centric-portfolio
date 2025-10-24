@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeroClient from "./HeroClient";
+import HeroClient, { HeroButtons } from "./HeroClient";
 
 export default function Hero() {
    return (
@@ -27,20 +27,8 @@ export default function Hero() {
                      with modern technologies, clean code, responsive design, performance optimization.
                   </p>
 
-                  {/* Buttons */}
-                  <div className="flex flex-wrap gap-4 pt-4">
-                     <button className="px-6 py-3 bg-transparent border border-border text-foreground rounded-lg font-semibold hover:bg-accent transition-all flex items-center gap-2">
-                        See The Impact
-                        <svg
-                           className="w-4 h-4"
-                           fill="none"
-                           viewBox="0 0 24 24"
-                           stroke="currentColor"
-                        >
-                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                     </button>
-                  </div>
+                  {/* Action Buttons */}
+                  <HeroButtons />
                </div>
 
                {/* Right Image */}

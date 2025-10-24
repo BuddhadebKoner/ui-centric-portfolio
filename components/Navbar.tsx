@@ -6,7 +6,6 @@ import Link from "next/link";
 
 export default function Navbar() {
    const [isDark, setIsDark] = useState(true);
-   const [isLoaded, setIsLoaded] = useState(false);
    const clickAudioRef = useRef<HTMLAudioElement>(null);
    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -41,7 +40,6 @@ export default function Navbar() {
       } else {
          document.documentElement.classList.remove("dark");
       }
-      setIsLoaded(true);
 
       // Listen for system theme changes if no cookie is set
       if (!savedTheme) {

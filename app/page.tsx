@@ -44,7 +44,6 @@ import {
   SiGithubactions,
   SiVercel,
   SiNetlify,
-  SiAwsamplify
 } from 'react-icons/si';
 import { FaJava, FaAws } from 'react-icons/fa';
 

@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import Image from "next/image";
-import { Volume2, Music } from "lucide-react";
+import { useState, useRef } from "react";
+import { Volume2 } from "lucide-react";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import {
    Dialog,
@@ -13,23 +12,32 @@ import {
    DialogTrigger,
 } from "@/components/ui/dialog";
 
-interface SpotifyTrack {
-   name: string;
-   artist: string;
-   albumArt: string;
-   url: string;
-}
-
-interface NowPlaying {
-   isPlaying: boolean;
-   title: string;
-   artist: string;
-   albumArt: string;
-   url: string;
-}
-
 export default function HeroClient() {
    const audioRef = useRef<HTMLAudioElement>(null);
+
+   return (
+      <>
+         {/* Name Badge */}
+         <div className="w-full flex justify-start">
+            <HoverBorderGradient
+               containerClassName="rounded-full"
+               as="button"
+               className="bg-background/50 backdrop-blur-sm text-foreground flex items-center space-x-2 px-4 py-2 cursor-pointer"
+               onClick={() => audioRef.current?.play()}
+            >
+               <span className="text-sm">Buddhadeb Koner</span>
+               <Volume2 className="h-5 w-5 text-highlight" />
+            </HoverBorderGradient>
+         </div>
+
+         {/* Audio element */}
+         <audio ref={audioRef} src="/buddhadebkoner.mp3" preload="auto" />
+      </>
+   );
+}
+
+// Export a separate component for the action buttons
+export function HeroButtons() {
    const [isDialogOpen, setIsDialogOpen] = useState(false);
    const [isSubmitting, setIsSubmitting] = useState(false);
    const [formData, setFormData] = useState({
@@ -45,31 +53,6 @@ export default function HeroClient() {
       type: "success" | "error" | null;
       message: string;
    }>({ type: null, message: "" });
-
-   // Spotify State
-   const [nowPlaying, setNowPlaying] = useState<NowPlaying | null>(null);
-   const [topTracks, setTopTracks] = useState<SpotifyTrack[]>([]);
-
-   // Fetch Spotify data
-   useEffect(() => {
-      const fetchSpotifyData = async () => {
-         try {
-            const response = await fetch("/api/spotify/now-playing");
-            if (response.ok) {
-               const data = await response.json();
-               setNowPlaying(data.nowPlaying);
-               setTopTracks(data.topTracks || []);
-            }
-         } catch (error) {
-            console.error("Failed to fetch Spotify data:", error);
-         }
-      };
-
-      fetchSpotifyData();
-      const interval = setInterval(fetchSpotifyData, 30000); // Update every 30 seconds
-
-      return () => clearInterval(interval);
-   }, []);
 
    const handleInputChange = (
       e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -129,21 +112,8 @@ export default function HeroClient() {
    };
 
    return (
-      <>
-         {/* Name Badge */}
-         <div className="w-full flex justify-start">
-            <HoverBorderGradient
-               containerClassName="rounded-full"
-               as="button"
-               className="bg-background/50 backdrop-blur-sm text-foreground flex items-center space-x-2 px-4 py-2 cursor-pointer"
-               onClick={() => audioRef.current?.play()}
-            >
-               <span className="text-sm">Buddhadeb Koner</span>
-               <Volume2 className="h-5 w-5 text-highlight" />
-            </HoverBorderGradient>
-         </div>
-
-         {/* Hire Me Dialog */}
+      <div className="flex flex-wrap gap-4 pt-4">
+         {/* Hire Me Button */}
          <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
             <DialogTrigger asChild>
                <button className="px-6 py-3 bg-foreground text-background rounded-lg font-semibold hover:opacity-90 transition-all flex items-center gap-2 group">
@@ -158,7 +128,7 @@ export default function HeroClient() {
                   </svg>
                </button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[500px] bg-background/95 backdrop-blur-md border-border">
+            <DialogContent className="sm:max-w-[500px] bg-background/20 backdrop-blur-xl border border-border/50 shadow-2xl">
                <DialogHeader>
                   <DialogTitle className="text-2xl font-semibold text-foreground">
                      Let&apos;s Work Together
@@ -207,7 +177,7 @@ export default function HeroClient() {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-highlight/50 transition-all"
+                        className="w-full px-4 py-2 bg-white/5 backdrop-blur-sm border border-border/30 rounded-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-highlight/50 focus:border-highlight/50 hover:bg-white/10 transition-all"
                      />
                   </div>
 
@@ -223,7 +193,7 @@ export default function HeroClient() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-highlight/50 transition-all"
+                        className="w-full px-4 py-2 bg-white/5 backdrop-blur-sm border border-border/30 rounded-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-highlight/50 focus:border-highlight/50 hover:bg-white/10 transition-all"
                      />
                   </div>
 
@@ -239,7 +209,7 @@ export default function HeroClient() {
                         value={formData.mobile}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-highlight/50 transition-all"
+                        className="w-full px-4 py-2 bg-white/5 backdrop-blur-sm border border-border/30 rounded-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-highlight/50 focus:border-highlight/50 hover:bg-white/10 transition-all"
                      />
                   </div>
 
@@ -254,7 +224,7 @@ export default function HeroClient() {
                         placeholder="Your Company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-highlight/50 transition-all"
+                        className="w-full px-4 py-2 bg-white/5 backdrop-blur-sm border border-border/30 rounded-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-highlight/50 focus:border-highlight/50 hover:bg-white/10 transition-all"
                      />
                   </div>
 
@@ -270,7 +240,7 @@ export default function HeroClient() {
                         value={formData.message}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-2 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-highlight/50 transition-all resize-none"
+                        className="w-full px-4 py-2 bg-white/5 backdrop-blur-sm border border-border/30 rounded-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-highlight/50 focus:border-highlight/50 hover:bg-white/10 transition-all resize-none"
                      />
                   </div>
 
@@ -283,7 +253,7 @@ export default function HeroClient() {
                         id="budget"
                         value={formData.budget}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-2 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-highlight/50 transition-all"
+                        className="w-full px-4 py-2 bg-white/5 backdrop-blur-sm border border-border/30 rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-highlight/50 focus:border-highlight/50 hover:bg-white/10 transition-all"
                      >
                         <option value="">Select range</option>
                         <option value="1,000-5,000">₹1,000 - ₹5,000</option>
@@ -316,8 +286,22 @@ export default function HeroClient() {
             </DialogContent>
          </Dialog>
 
-         {/* Audio element */}
-         <audio ref={audioRef} src="/buddhadebkoner.mp3" preload="auto" />
-      </>
+         {/* Check GitHub Button */}
+         <a
+            href="https://github.com/BuddhadebKoner"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-transparent border border-border text-foreground rounded-lg font-semibold hover:bg-accent transition-all flex items-center gap-2 group"
+         >
+            Check GitHub
+            <svg
+               className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+               fill="currentColor"
+               viewBox="0 0 24 24"
+            >
+               <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+         </a>
+      </div>
    );
 }
