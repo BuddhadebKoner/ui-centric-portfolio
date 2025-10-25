@@ -16,9 +16,9 @@ export default function SubHero() {
             {/* Safari Browser Mockup */}
             <div className="w-full">
                <Safari
-                  url="notesdoo.vercel.app"
+                  url="bookyourhotel.vercel.app"
                   className="w-full"
-                  imageSrc="https://res.cloudinary.com/dsfztnp9x/image/upload/v1759997327/recentWork_tye4yp.png"
+                  imageSrc="https://res.cloudinary.com/dsfztnp9x/image/upload/v1761368429/Screenshot_2025-10-25_at_10-14-56_BookYourHotel_-_India_s_Premier_Hotel_Booking_Platform_totvc6.png"
                />
             </div>
          </div>

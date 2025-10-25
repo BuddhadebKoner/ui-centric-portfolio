@@ -2,26 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
-
-const events = [
-   {
-      title: "Tech Community Meetup: Web Development Workshop",
-      description:
-         "A hands-on workshop on Next.js, Tailwind CSS and TypeScript for local developers.",
-      demoUrl:
-         "https://www.linkedin.com/feed/update/urn:li:activity:7268438874941460481/",
-      sourceCodeUrl: "",
-      images: [
-         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1743102987/next-portfolio/events/noadz1h59wlazgqhwkfx.jpg",
-         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1743103006/next-portfolio/events/zuqaractc6jfrf3nlp38.jpg",
-         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1743103007/next-portfolio/events/yweyqmqszjgh4kcu0uae.jpg",
-         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1743103017/next-portfolio/events/uxiggs4uqvjmgmfqhk7o.jpg",
-      ],
-      date: "2023-03-15",
-      location: "Kolkata, India",
-      tags: ["community event", "workshop", "tech meetup"],
-   },
-];
+import { events } from "@/data";
 
 export const metadata: Metadata = {
    title: "Events - Buddhadeb Koner | FullStack Web Developer",
@@ -66,16 +47,16 @@ export default function EventsPage() {
 
          <Navbar />
 
-         <div className="relative pt-16">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+         <div className="relative pt-12 sm:pt-16">
+            <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-10">
                {/* Header */}
-               <div className="mb-12">
+               <div className="mb-8 sm:mb-10 md:mb-12">
                   <Link
                      href="/"
-                     className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-6"
+                     className="inline-flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors mb-4 sm:mb-6"
                   >
                      <svg
-                        className="w-5 h-5"
+                        className="w-4 h-4 sm:w-5 sm:h-5"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -89,35 +70,35 @@ export default function EventsPage() {
                      </svg>
                      Back to Home
                   </Link>
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">All Events</h1>
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">All Events</h1>
                   <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
                      Talks, workshops and community meetups I&apos;ve organized or attended.
                   </p>
                </div>
 
                {/* Events Grid */}
-               <div className="space-y-12">
+               <div className="space-y-6 sm:space-y-8 md:space-y-12">
                   {events.map((event, idx) => (
                      <article key={idx} className="group relative">
-                        <div className="relative bg-card/60 backdrop-blur-xl border border-border/50 rounded-2xl overflow-hidden hover:border-highlight/50 transition-all shadow-xl">
+                        <div className="relative bg-card/60 backdrop-blur-xl border border-border/50 rounded-xl sm:rounded-2xl overflow-hidden hover:border-highlight/50 transition-all shadow-xl">
                            {/* Header Section */}
-                           <div className="relative p-8 border-b border-border/30">
+                           <div className="relative p-4 sm:p-6 md:p-8 border-b border-border/30">
 
-                              <div className="space-y-4">
-                                 <div className="flex items-start justify-between gap-4">
-                                    <div className="flex-1">
-                                       <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-3 leading-tight">
+                              <div className="space-y-3 sm:space-y-4">
+                                 <div className="flex flex-col sm:flex-row items-start justify-between gap-3 sm:gap-4">
+                                    <div className="flex-1 w-full">
+                                       <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-2 sm:mb-3 leading-tight">
                                           {event.title}
                                        </h2>
-                                       <div className="flex items-center gap-4 text-xs sm:text-sm text-muted-foreground mb-4">
+                                       <div className="flex flex-wrap items-center gap-2 sm:gap-3 md:gap-4 text-[10px] sm:text-xs md:text-sm text-muted-foreground mb-3 sm:mb-4">
                                           <span className="flex items-center gap-1">
-                                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                             <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                              </svg>
                                              {event.date}
                                           </span>
                                           <span className="flex items-center gap-1">
-                                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                             <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                              </svg>
@@ -127,16 +108,16 @@ export default function EventsPage() {
                                     </div>
 
                                     {/* Action buttons */}
-                                    <div className="flex gap-3">
+                                    <div className="flex gap-2 sm:gap-3 w-full sm:w-auto">
                                        {event.demoUrl && (
                                           <a
                                              href={event.demoUrl}
                                              target="_blank"
                                              rel="noopener noreferrer"
-                                             className="px-6 py-3 bg-foreground text-background rounded-lg font-medium hover:shadow transition-all flex items-center gap-2"
+                                             className="flex-1 sm:flex-initial px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 bg-foreground text-background rounded-md sm:rounded-lg font-medium hover:shadow transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-xs sm:text-sm"
                                           >
                                              View Post
-                                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                             <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                              </svg>
                                           </a>
@@ -144,16 +125,16 @@ export default function EventsPage() {
                                     </div>
                                  </div>
 
-                                 <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
+                                 <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground leading-relaxed">
                                     {event.description}
                                  </p>
 
                                  {/* Tags */}
-                                 <div className="flex flex-wrap gap-2 pt-2">
+                                 <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-1 sm:pt-2">
                                     {event.tags.map((tag, tagIndex) => (
                                        <span
                                           key={tagIndex}
-                                          className="px-3 py-1.5 bg-accent/20 backdrop-blur-sm border border-border/30 text-foreground rounded-full text-xs font-medium"
+                                          className="px-2 sm:px-2.5 md:px-3 py-1 sm:py-1.5 bg-accent/20 backdrop-blur-sm border border-border/30 text-foreground rounded-full text-[10px] sm:text-xs font-medium"
                                        >
                                           {tag}
                                        </span>
@@ -163,16 +144,16 @@ export default function EventsPage() {
                            </div>
 
                            {/* Image Gallery Section with horizontal scroll */}
-                           <div className="p-6 bg-background/50">
+                           <div className="p-3 sm:p-4 md:p-6 bg-background/50">
                               <div className="relative">
-                                 <div className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-2">
+                                 <div className="flex gap-2 sm:gap-3 md:gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-2">
                                     {event.images.map((img, imgIdx) => (
                                        <div
                                           key={imgIdx}
-                                          className="relative flex-shrink-0 w-80 h-64 snap-center rounded-xl overflow-hidden border border-border/30 hover:border-highlight/50 transition-all group/img"
+                                          className="relative flex-shrink-0 w-64 h-48 sm:w-72 sm:h-56 md:w-80 md:h-64 snap-center rounded-lg sm:rounded-xl overflow-hidden border border-border/30 hover:border-highlight/50 transition-all group/img"
                                        >
                                           <Image
-                                             src={img}
+                                             src={typeof img === "string" ? img : img.src}
                                              alt={`${event.title} - Image ${imgIdx + 1}`}
                                              fill
                                              className="object-cover group-hover/img:scale-110 transition-transform duration-500"
@@ -182,11 +163,11 @@ export default function EventsPage() {
                                  </div>
 
                                  {/* Image count indicator */}
-                                 <div className="flex justify-center gap-1.5 mt-4">
+                                 <div className="flex justify-center gap-1 sm:gap-1.5 mt-3 sm:mt-4">
                                     {event.images.map((_, imgIdx) => (
                                        <div
                                           key={imgIdx}
-                                          className="w-2 h-2 rounded-full bg-muted-foreground/30 hover:bg-highlight/50 transition-colors cursor-pointer"
+                                          className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-muted-foreground/30 hover:bg-highlight/50 transition-colors cursor-pointer"
                                        ></div>
                                     ))}
                                  </div>

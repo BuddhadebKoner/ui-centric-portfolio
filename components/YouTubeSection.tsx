@@ -10,34 +10,7 @@ import {
    type CarouselApi,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-
-const videos = [
-   {
-      title: "Build a Modern Website",
-      videoId: "VSzp-SanPc4",
-      thumbnail: `https://img.youtube.com/vi/VSzp-SanPc4/maxresdefault.jpg`,
-   },
-   {
-      title: "React Tutorial for Beginners",
-      videoId: "JR6cKsrDuyE",
-      thumbnail: `https://img.youtube.com/vi/JR6cKsrDuyE/maxresdefault.jpg`,
-   },
-   {
-      title: "Full Stack Development Guide",
-      videoId: "HA_eSYIxYLU",
-      thumbnail: `https://img.youtube.com/vi/HA_eSYIxYLU/maxresdefault.jpg`,
-   },
-   {
-      title: "JavaScript Essentials",
-      videoId: "QAqQnQQQjmg",
-      thumbnail: `https://img.youtube.com/vi/QAqQnQQQjmg/maxresdefault.jpg`,
-   },
-   {
-      title: "Web Development Tips",
-      videoId: "NM7zAhYeB34",
-      thumbnail: `https://img.youtube.com/vi/NM7zAhYeB34/maxresdefault.jpg`,
-   },
-];
+import { youtubeVideos } from "@/data";
 
 export default function YouTubeSection() {
    const [api, setApi] = useState<CarouselApi>();
@@ -51,13 +24,13 @@ export default function YouTubeSection() {
    }, [api]);
 
    return (
-      <section className="py-20">
-         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="space-y-6 mb-12">
-               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
+      <section className="py-12 sm:py-16 md:py-20">
+         <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+            <div className="space-y-3 sm:space-y-4 md:space-y-6 mb-8 sm:mb-10 md:mb-12">
+               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
                   YouTube Videos
                </h2>
-               <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
+               <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground">
                   Watch my{" "}
                   <span className="text-highlight font-medium">
                      tutorials and guides
@@ -79,14 +52,14 @@ export default function YouTubeSection() {
                   onMouseEnter={autoplayPlugin.current.stop}
                   onMouseLeave={autoplayPlugin.current.reset}
                >
-                  <CarouselContent className="-ml-4">
-                     {videos.map((video, index) => (
-                        <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <CarouselContent className="-ml-2 sm:-ml-4">
+                     {youtubeVideos.map((video, index) => (
+                        <CarouselItem key={index} className="pl-2 sm:pl-4 md:basis-1/2 lg:basis-1/3">
                            <a
-                              href={`https://www.youtube.com/watch?v=${video.videoId}`}
+                              href={video.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="group bg-card/50 backdrop-blur-sm border border-border rounded-xl overflow-hidden hover:border-highlight transition-all hover:shadow-lg block h-full"
+                              className="group bg-card/50 backdrop-blur-sm border border-border rounded-lg sm:rounded-xl overflow-hidden hover:border-highlight transition-all hover:shadow-lg block h-full"
                            >
                               {/* Video Thumbnail */}
                               <div className="relative aspect-video overflow-hidden bg-muted">

@@ -10,73 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Link from "next/link";
-
-const projects = [
-   {
-      title: "ZIDIO-internship project",
-      description: "A full-stack e-commerce platform for selling t-shirts with comprehensive admin controls and customer features.",
-      demoUrl: "https://zidio-project-three.vercel.app/",
-      sourceCodeUrl: "https://github.com/BuddhadebKoner/ZIDIO-PROJECT",
-      image: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1753897864/Screenshot_2025-07-30_at_23-17-49_E-commerce_turllc.png",
-      tags: ["React-v19", "Vite", "TanStack Query", "Tailwind CSS-v4.0"],
-   },
-   {
-      title: "AI powered Portfolio",
-      description: "An AI-powered full-stack portfolio website that showcases your skills and projects with GEMINI AI integration.",
-      demoUrl: "https://full-stack-portfolio-nine-theta.vercel.app/",
-      sourceCodeUrl: "https://github.com/BuddhadebKoner/AI-Powered-FullStack-Portfolio",
-      image: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1750497000/Screenshot_2025-06-20_at_10-31-47_Buddhadeb_Koner_FullStack_Web_Developer_d5qnbk.png",
-      tags: ["Next.js-v15", "React-v19", "Tailwind CSS-v4.0", "TypeScript"],
-   },
-   {
-      title: "URL Shortener",
-      description: "A modern URL shortener application that allows users to shorten long URLs and manage their links efficiently.",
-      demoUrl: "https://abcredirect.vercel.app/",
-      sourceCodeUrl: "https://github.com/BuddhadebKoner/url-shortener",
-      image: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1749264353/Screenshot_2025-06-07_at_08-15-32_1_Post_Feed_LinkedIn_cfugl1.png",
-      tags: ["Next.js-v15", "React-v19", "Tailwind CSS-v4.0"],
-   },
-   {
-      title: "Modern Portfolio Developers",
-      description: "Experience a sleek and modern portfolio design tailored for developers with elegant, responsive interface.",
-      demoUrl: "https://buddhadebkoner.vercel.app/",
-      sourceCodeUrl: "https://github.com/BuddhadebKoner/devaloper-modern-portfolio/",
-      image: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1741678714/next-portfolio/works/zugytqjxnvodwx8cwrob.png",
-      tags: ["Next.js-v15", "React-v19", "Tailwind CSS-v4.0"],
-   },
-   {
-      title: "MERN Blog",
-      description: "Discover an engaging blog platform built with the MERN stack with custom admin panel for content management.",
-      demoUrl: "https://blog-app-sandy-sigma.vercel.app/",
-      sourceCodeUrl: "https://github.com/BuddhadebKoner/Blog-App/",
-      image: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1741078414/mern-blog/blogs/bkdijkurwg0tawqboovl.png",
-      tags: ["MERN", "Tailwind CSS", "MongoDB", "Express"],
-   },
-   {
-      title: "Kochugram",
-      description: "A dynamic social media platform designed for the Koch community with posts, likes, comments, and follow features.",
-      demoUrl: "https://kochugram-com.vercel.app/",
-      sourceCodeUrl: "https://github.com/BuddhadebKoner/kochugram.com/",
-      image: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1740969977/mern-blog/tdtyjvq7yq475tpwuy1a.png",
-      tags: ["REACT", "Tailwind CSS", "TypeScript", "appWrite"],
-   },
-   {
-      title: "Notes Doo",
-      description: "Notes sharing website — Share Knowledge, Excel Together.",
-      demoUrl: "https://notesdoo.vercel.app/",
-      sourceCodeUrl: "https://github.com/BuddhadebKoner/notes-do",
-      image: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1759997327/recentWork_tye4yp.png",
-      tags: ["Next.js", "Tailwind CSS", "TypeScript"],
-   },
-   {
-      title: "MongoDB Aggregation Pipeline",
-      description: "A focused learning environment to practice MongoDB aggregation pipelines with Users, Books, and Authors collections.",
-      demoUrl: "https://mongodb-aggregation-pipeline-prrp.vercel.app/",
-      sourceCodeUrl: "https://github.com/BuddhadebKoner/mongodb-aggregation-pipeline",
-      image: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1760068413/Screenshot_2025-10-10_at_09-23-19_Vite_React_vaapy0.png",
-      tags: ["MongoDB", "Aggregation", "Vite", "React"],
-   },
-];
+import { projects } from "@/data";
 
 export default function ProjectsSection() {
    const [api, setApi] = useState<CarouselApi>();
@@ -144,7 +78,19 @@ export default function ProjectsSection() {
                   <CarouselContent className="-ml-4">
                      {projects.map((project, index) => (
                         <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                           <div className="group bg-card/50 backdrop-blur-sm border border-border rounded-xl overflow-hidden hover:border-highlight transition-all hover:shadow-lg h-full">
+                           <div className="group bg-card/50 backdrop-blur-sm border border-border rounded-xl overflow-hidden hover:border-highlight transition-all hover:shadow-lg h-full relative">
+                              {/* NEW Badge - Top Right */}
+                              {project.isNew && (
+                                 <div className="absolute top-3 right-3 z-10">
+                                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-emerald-500 to-teal-500 dark:from-emerald-400 dark:to-teal-400 text-white dark:text-black rounded-full text-xs font-bold shadow-lg shadow-emerald-500/50 dark:shadow-emerald-400/50 animate-pulse">
+                                       <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                       </svg>
+                                       NEW
+                                    </span>
+                                 </div>
+                              )}
+
                               {/* Project Image */}
                               <div className="relative aspect-video overflow-hidden">
                                  <Image

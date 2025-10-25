@@ -10,39 +10,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { Safari } from "@/components/ui/safari";
 import Link from "next/link";
-
-const landingPages = [
-   {
-      title: "E-commerce Platform",
-      url: "zidio-project-three.vercel.app",
-      imageSrc: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1753897864/Screenshot_2025-07-30_at_23-17-49_E-commerce_turllc.png",
-      demoUrl: "https://zidio-project-three.vercel.app/",
-   },
-   {
-      title: "AI Portfolio",
-      url: "full-stack-portfolio.vercel.app",
-      imageSrc: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1750497000/Screenshot_2025-06-20_at_10-31-47_Buddhadeb_Koner_FullStack_Web_Developer_d5qnbk.png",
-      demoUrl: "https://full-stack-portfolio-nine-theta.vercel.app/",
-   },
-   {
-      title: "Modern Developer Portfolio",
-      url: "buddhadebkoner.vercel.app",
-      imageSrc: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1741678714/next-portfolio/works/zugytqjxnvodwx8cwrob.png",
-      demoUrl: "https://buddhadebkoner.vercel.app/",
-   },
-   {
-      title: "Notes Doo",
-      url: "notesdoo.vercel.app",
-      imageSrc: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1759997327/recentWork_tye4yp.png",
-      demoUrl: "https://notesdoo.vercel.app/",
-   },
-   {
-      title: "MongoDB Aggregation Pipeline",
-      url: "mongodb-aggregation-pipeline-prrp.vercel.app",
-      imageSrc: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1760068413/Screenshot_2025-10-10_at_09-23-19_Vite_React_vaapy0.png",
-      demoUrl: "https://mongodb-aggregation-pipeline-prrp.vercel.app/",
-   },
-];
+import { landingPages } from "@/data";
 
 export default function LandingPagesSection() {
    const [api, setApi] = useState<CarouselApi>();
@@ -56,15 +24,15 @@ export default function LandingPagesSection() {
    }, [api]);
 
    return (
-      <section className="py-20">
-         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="space-y-6 mb-12">
-               <div className="flex items-center justify-between">
-                  <div>
-                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
+      <section className="py-12 sm:py-16 md:py-20">
+         <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 w-full">
+            <div className="space-y-3 sm:space-y-4 md:space-y-6 mb-8 sm:mb-10 md:mb-12">
+               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
+                  <div className="flex-1">
+                     <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
                         Popular Landing Pages
                      </h2>
-                     <p className="text-sm sm:text-base md:text-lg text-muted-foreground mt-2">
+                     <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground mt-1 sm:mt-2">
                         Explore my{" "}
                         <span className="text-highlight font-medium">
                            featured landing page designs
@@ -74,11 +42,11 @@ export default function LandingPagesSection() {
                   </div>
                   <Link
                      href="/landing-pages"
-                     className="hidden sm:inline-flex items-center gap-2 px-6 py-3 bg-card/80 backdrop-blur-sm border border-border text-foreground rounded-lg font-medium hover:bg-card hover:border-highlight transition-all"
+                     className="hidden sm:inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 bg-card/80 backdrop-blur-sm border border-border text-foreground rounded-md sm:rounded-lg text-xs sm:text-sm font-medium hover:bg-card hover:border-highlight transition-all"
                   >
                      View All
                      <svg
-                        className="w-4 h-4"
+                        className="w-3 h-3 sm:w-4 sm:h-4"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -119,19 +87,20 @@ export default function LandingPagesSection() {
                               />
 
                               {/* Page Info */}
-                              <div className="flex items-center justify-between">
-                                 <h3 className="text-xl font-semibold text-foreground">
+                              <div className="flex items-center justify-between gap-2">
+                                 <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground line-clamp-1">
                                     {page.title}
                                  </h3>
                                  <a
                                     href={page.demoUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="px-6 py-2 bg-foreground text-background rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center gap-2"
+                                    className="px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 bg-foreground text-background rounded-md sm:rounded-lg text-xs sm:text-sm font-medium hover:opacity-90 transition-opacity flex items-center gap-1 sm:gap-2 whitespace-nowrap"
                                  >
-                                    View Live
+                                    <span className="hidden sm:inline">View Live</span>
+                                    <span className="sm:hidden">View</span>
                                     <svg
-                                       className="w-4 h-4"
+                                       className="w-3 h-3 sm:w-4 sm:h-4"
                                        fill="none"
                                        viewBox="0 0 24 24"
                                        stroke="currentColor"
@@ -152,15 +121,15 @@ export default function LandingPagesSection() {
                </Carousel>
 
                {/* Navigation Buttons - Bottom Right */}
-               <div className="flex justify-end gap-3 mt-6">
+               <div className="flex justify-end gap-2 sm:gap-3 mt-4 sm:mt-6">
                   <button
                      onClick={() => api?.scrollPrev()}
                      disabled={!api?.canScrollPrev()}
-                     className="w-10 h-10 rounded-full bg-card/80 backdrop-blur-sm border border-border flex items-center justify-center hover:bg-card hover:border-highlight transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                     className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-card/80 backdrop-blur-sm border border-border flex items-center justify-center hover:bg-card hover:border-highlight transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                      aria-label="Previous slide"
                   >
                      <svg
-                        className="w-5 h-5 text-foreground"
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-foreground"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -171,11 +140,11 @@ export default function LandingPagesSection() {
                   <button
                      onClick={() => api?.scrollNext()}
                      disabled={!api?.canScrollNext()}
-                     className="w-10 h-10 rounded-full bg-card/80 backdrop-blur-sm border border-border flex items-center justify-center hover:bg-card hover:border-highlight transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                     className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-card/80 backdrop-blur-sm border border-border flex items-center justify-center hover:bg-card hover:border-highlight transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                      aria-label="Next slide"
                   >
                      <svg
-                        className="w-5 h-5 text-foreground"
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-foreground"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"

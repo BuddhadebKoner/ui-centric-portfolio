@@ -10,44 +10,7 @@ import {
    type CarouselApi,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-
-const events = [
-   {
-      title: "Tech Community Meetup: Web Development Workshop",
-      description:
-         "Organized and led an interactive workshop on modern web development techniques for local tech enthusiasts. This community event focused on Next.js, Tailwind CSS, and TypeScript fundamentals through hands-on coding sessions, networking opportunities, and collaborative problem-solving exercises.",
-      demoUrl:
-         "https://www.linkedin.com/feed/update/urn:li:activity:7268438874941460481/",
-      sourceCodeUrl: "",
-      images: [
-         {
-            src: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1743102987/next-portfolio/events/noadz1h59wlazgqhwkfx.jpg",
-            alt: "Buddhadeb Koner presenting at web development workshop",
-         },
-         {
-            src: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1743103006/next-portfolio/events/zuqaractc6jfrf3nlp38.jpg",
-            alt: "Attendees participating in coding exercises at tech meetup",
-         },
-         {
-            src: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1743103007/next-portfolio/events/yweyqmqszjgh4kcu0uae.jpg",
-            alt: "Group discussion during web development workshop",
-         },
-         {
-            src: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1743103017/next-portfolio/events/uxiggs4uqvjmgmfqhk7o.jpg",
-            alt: "Networking session at community tech event",
-         },
-      ],
-      date: "2023-03-15",
-      location: "Durgapur, India",
-      tags: [
-         "community event",
-         "web development workshop",
-         "tech meetup",
-         "coding workshop",
-         "developer networking",
-      ],
-   },
-];
+import { events } from "@/data";
 
 export default function EventsSection() {
    const autoplayPlugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: true }))
@@ -98,7 +61,11 @@ export default function EventsSection() {
                               <CarouselItem key={idx}>
                                  <div className="space-y-4">
                                     <div className="relative aspect-video overflow-hidden rounded-lg">
-                                       <Image src={img.src} alt={img.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                                       {typeof img === "string" ? (
+                                          <Image src={img} alt={`Event image ${idx + 1}`} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                                       ) : (
+                                          <Image src={img.src} alt={img.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                                       )}
                                     </div>
                                  </div>
                               </CarouselItem>

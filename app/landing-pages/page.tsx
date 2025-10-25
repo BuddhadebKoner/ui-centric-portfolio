@@ -2,35 +2,8 @@
 
 import { Safari } from "@/components/ui/safari";
 import Link from "next/link";
-
-const landingPages = [
-   {
-      title: "E-commerce Platform",
-      url: "zidio-project-three.vercel.app",
-      imageSrc: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1753897864/Screenshot_2025-07-30_at_23-17-49_E-commerce_turllc.png",
-      demoUrl: "https://zidio-project-three.vercel.app/",
-      description: "A comprehensive e-commerce platform with modern UI and seamless user experience.",
-      tags: ["React-v19", "Vite", "TanStack Query", "Tailwind CSS-v4.0"],
-   },
-   {
-      title: "AI Portfolio",
-      url: "full-stack-portfolio.vercel.app",
-      imageSrc: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1750497000/Screenshot_2025-06-20_at_10-31-47_Buddhadeb_Koner_FullStack_Web_Developer_d5qnbk.png",
-      demoUrl: "https://full-stack-portfolio-nine-theta.vercel.app/",
-      description: "An AI-powered full-stack portfolio website with GEMINI AI integration.",
-      tags: ["Next.js-v15", "React-v19", "Tailwind CSS-v4.0", "TypeScript"],
-   },
-   {
-      title: "Modern Developer Portfolio",
-      url: "buddhadebkoner.vercel.app",
-      imageSrc: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1741678714/next-portfolio/works/zugytqjxnvodwx8cwrob.png",
-      demoUrl: "https://buddhadebkoner.vercel.app/",
-      description: "A sleek and modern portfolio design tailored for developers with elegant interface.",
-      tags: ["Next.js-v15", "React-v19", "Tailwind CSS-v4.0"],
-   },
-];
-
 import Navbar from "@/components/Navbar";
+import { landingPages } from "@/data";
 
 export default function LandingPagesPage() {
    return (
@@ -53,16 +26,16 @@ export default function LandingPagesPage() {
          <Navbar />
 
          {/* Content */}
-         <div className="relative pt-16">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+         <div className="relative pt-12 sm:pt-16">
+            <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-10">
                {/* Header */}
-               <div className="mb-12">
+               <div className="mb-8 sm:mb-10 md:mb-12">
                   <Link
                      href="/"
-                     className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-6"
+                     className="inline-flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors mb-4 sm:mb-6"
                   >
                      <svg
-                        className="w-5 h-5"
+                        className="w-4 h-4 sm:w-5 sm:h-5"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -76,10 +49,10 @@ export default function LandingPagesPage() {
                      </svg>
                      Back to Home
                   </Link>
-                  <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 sm:mb-4">
                      Landing Pages
                   </h1>
-                  <p className="text-lg text-muted-foreground">
+                  <p className="text-sm sm:text-base md:text-lg text-muted-foreground">
                      Explore all my{" "}
                      <span className="text-highlight font-medium">
                         featured landing page designs
@@ -89,13 +62,13 @@ export default function LandingPagesPage() {
                </div>
 
                {/* Landing Pages Grid */}
-               <div className="grid gap-12">
+               <div className="grid gap-6 sm:gap-8 md:gap-10 lg:gap-12">
                   {landingPages.map((page, index) => (
                      <div
                         key={index}
-                        className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-6 hover:border-highlight transition-all"
+                        className="bg-card/30 backdrop-blur-sm border border-border rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 hover:border-highlight transition-all"
                      >
-                        <div className="grid lg:grid-cols-2 gap-8 items-start">
+                        <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 items-start">
                            {/* Safari Browser Mockup */}
                            <div className="order-2 lg:order-1">
                               <Safari
@@ -106,22 +79,22 @@ export default function LandingPagesPage() {
                            </div>
 
                            {/* Page Info */}
-                           <div className="order-1 lg:order-2 space-y-6">
+                           <div className="order-1 lg:order-2 space-y-3 sm:space-y-4 md:space-y-6">
                               <div>
-                                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
+                                 <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-2 sm:mb-3">
                                     {page.title}
                                  </h2>
-                                 <p className="text-muted-foreground text-lg">
+                                 <p className="text-xs sm:text-sm md:text-base lg:text-lg text-muted-foreground">
                                     {page.description}
                                  </p>
                               </div>
 
                               {/* Tags */}
-                              <div className="flex flex-wrap gap-2">
+                              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                                  {page.tags.map((tag, tagIndex) => (
                                     <span
                                        key={tagIndex}
-                                       className="px-3 py-1.5 bg-accent/20 text-foreground rounded-lg text-sm font-medium"
+                                       className="px-2 sm:px-2.5 md:px-3 py-1 sm:py-1.5 bg-accent/20 text-foreground rounded-md sm:rounded-lg text-[10px] sm:text-xs md:text-sm font-medium"
                                     >
                                        {tag}
                                     </span>
@@ -129,16 +102,16 @@ export default function LandingPagesPage() {
                               </div>
 
                               {/* Buttons */}
-                              <div className="flex flex-wrap gap-4">
+                              <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
                                  <a
                                     href={page.demoUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                                    className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 bg-foreground text-background rounded-md sm:rounded-lg text-xs sm:text-sm md:text-base font-semibold hover:opacity-90 transition-opacity"
                                  >
                                     View Live Demo
                                     <svg
-                                       className="w-5 h-5"
+                                       className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5"
                                        fill="none"
                                        viewBox="0 0 24 24"
                                        stroke="currentColor"
