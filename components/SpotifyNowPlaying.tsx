@@ -16,6 +16,19 @@ export default function SpotifyNowPlaying() {
    const [nowPlaying, setNowPlaying] = useState<NowPlaying | null>(null);
    const [isTransitioning, setIsTransitioning] = useState(false);
 
+   // Update body padding when music is playing/stopped
+   useEffect(() => {
+      if (nowPlaying?.isPlaying) {
+         document.body.style.paddingBottom = '60px'; // Adjust based on actual bar height
+      } else {
+         document.body.style.paddingBottom = '0';
+      }
+
+      return () => {
+         document.body.style.paddingBottom = '0';
+      };
+   }, [nowPlaying?.isPlaying]);
+
    // Memoized fetch function to prevent recreation on every render
    const fetchSpotifyData = useCallback(async () => {
       try {

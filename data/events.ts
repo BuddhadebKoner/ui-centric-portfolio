@@ -20,7 +20,7 @@ export const events: Event[] = [
       description:
          "Great experience at the GDG Durgapur event! A big thank you to everyone who organized such an amazing session — full of fun, learning, and exciting insights into AI. The event brought together developers, enthusiasts, and industry experts to explore the latest trends in artificial intelligence and its practical applications.",
       demoUrl:
-         "https://gdg.community.dev/gdg-durgapur/",
+         "https://www.linkedin.com/feed/update/urn:li:activity:7391115561453252608/",
       sourceCodeUrl: "",
       images: [
          {

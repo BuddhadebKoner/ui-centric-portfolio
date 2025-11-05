@@ -189,7 +189,9 @@ export default function RootLayout({
       </head>
       <body className={`${manrope.variable} ${montserrat.variable} antialiased`}>
         <SpotifyNowPlaying />
-        {children}
+        <div className="overflow-hidden">
+          {children}
+        </div>
       </body>
     </html>
   );
