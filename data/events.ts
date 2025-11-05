@@ -16,6 +16,46 @@ export interface Event {
 
 export const events: Event[] = [
    {
+      title: "GDG Durgapur: AI & Innovation Summit",
+      description:
+         "Great experience at the GDG Durgapur event! A big thank you to everyone who organized such an amazing session — full of fun, learning, and exciting insights into AI. The event brought together developers, enthusiasts, and industry experts to explore the latest trends in artificial intelligence and its practical applications.",
+      demoUrl:
+         "https://gdg.community.dev/gdg-durgapur/",
+      sourceCodeUrl: "",
+      images: [
+         {
+            src: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1762357605/gdg_durgapur_2_fyqyrk.jpg",
+            alt: "Buddhadeb Koner holding Gemini banner at GDG Durgapur event",
+         },
+         {
+            src: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1762357602/gdg_durgapur3_nfvigk.jpg",
+            alt: "GDG Durgapur event entry card",
+         },
+         {
+            src: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1762357600/gdg_durgapur_1_ktfgzk.jpg",
+            alt: "Group photo with friends at GDG Durgapur event",
+         },
+         {
+            src: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1762357599/gdg_durgapur_7_v3tblc.jpg",
+            alt: "Friends group at GDG Durgapur AI & Innovation Summit",
+         },
+         {
+            src: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1762357598/gdg_durgapur_8_kta9hj.jpg",
+            alt: "GDG Durgapur event venue - Durgapur Srijoni auditorium",
+         }
+      ],
+      date: "2025-11-01",
+      location: "Durgapur, India",
+      tags: [
+         "GDG",
+         "AI",
+         "Google Developer Group",
+         "community event",
+         "artificial intelligence",
+         "innovation",
+      ],
+   },
+   {
       title: "Tech Community Meetup: Web Development Workshop",
       description:
          "Organized and led an interactive workshop on modern web development techniques for local tech enthusiasts. This community event focused on Next.js, Tailwind CSS, and TypeScript fundamentals through hands-on coding sessions, networking opportunities, and collaborative problem-solving exercises.",

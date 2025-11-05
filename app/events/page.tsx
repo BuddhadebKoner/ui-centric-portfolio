@@ -16,10 +16,10 @@ export const metadata: Metadata = {
       siteName: "Buddhadeb Koner",
       images: [
          {
-            url: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1743102987/next-portfolio/events/noadz1h59wlazgqhwkfx.jpg",
+            url: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1762356238/gdg_durgapur_1_hpbkqa.jpg",
             width: 1200,
             height: 630,
-            alt: "Tech Community Meetup - Web Development Workshop",
+            alt: "GDG Durgapur - AI & Innovation Summit",
          },
       ],
       locale: "en_IN",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       description:
          "Events, talks and workshops conducted or attended by Buddhadeb Koner. Find workshop recaps, photos, and links.",
       images:
-         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1743102987/next-portfolio/events/noadz1h59wlazgqhwkfx.jpg",
+         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1762356238/gdg_durgapur_1_hpbkqa.jpg",
    },
    alternates: { canonical: "https://buddhadebkoner.vercel.app/events" },
 };

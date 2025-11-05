@@ -15,22 +15,43 @@ import { events } from "@/data";
 export default function EventsSection() {
    const autoplayPlugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: true }))
    const [api, setApi] = useState<CarouselApi | undefined>()
+   const [selectedEventIndex, setSelectedEventIndex] = useState(0)
 
    useEffect(() => {
       if (!api) return
-   }, [api])
+      // Reset carousel to first slide when event changes
+      api.scrollTo(0)
+   }, [api, selectedEventIndex])
 
-   const ev = events[0]
+   const ev = events[selectedEventIndex]
 
    return (
       <section className="py-20">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="flex items-center justify-between mb-8">
-               <div>
+               <div className="flex-1">
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">Events & Workshops</h2>
                   <p className="text-sm sm:text-base md:text-lg text-muted-foreground mt-2">
                      Highlights of events I&apos;ve conducted or participated in — talks, workshops and community meetups.
                   </p>
+
+                  {/* Event Selector */}
+                  {events.length > 1 && (
+                     <div className="mt-4 flex flex-wrap gap-2">
+                        {events.map((event, idx) => (
+                           <button
+                              key={idx}
+                              onClick={() => setSelectedEventIndex(idx)}
+                              className={`px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${selectedEventIndex === idx
+                                    ? "bg-foreground text-background"
+                                    : "bg-card/80 backdrop-blur-sm border border-border text-foreground hover:bg-card hover:border-highlight"
+                                 }`}
+                           >
+                              {event.title.split(':')[0]}
+                           </button>
+                        ))}
+                     </div>
+                  )}
                </div>
                <Link
                   href="/events"
