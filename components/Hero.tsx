@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroClient, { HeroButtons } from "./HeroClient";
+import SpotifyNowPlaying from "./SpotifyNowPlaying";
 
 export default function Hero() {
    return (
@@ -10,6 +11,9 @@ export default function Hero() {
                <div className="space-y-8">
                   {/* Client-side interactive components */}
                   <HeroClient />
+
+                  {/* Spotify Now Playing */}
+                  <SpotifyNowPlaying />
 
                   {/* Heading */}
                   <h1 className="font-[family-name:var(--font-manrope)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[72px] font-semibold leading-tight lg:leading-[1.1]">

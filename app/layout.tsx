@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Manrope, Montserrat } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import SpotifyNowPlaying from "@/components/SpotifyNowPlaying";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -188,7 +187,6 @@ export default function RootLayout({
         />
       </head>
       <body className={`${manrope.variable} ${montserrat.variable} antialiased`}>
-        <SpotifyNowPlaying />
         <div className="overflow-hidden">
           {children}
         </div>

@@ -130,6 +130,13 @@ export default function Navbar() {
                            Home
                         </Link>
                         <Link
+                           href="/blogs"
+                           className="px-4 py-2 rounded-lg hover:bg-accent/30 dark:hover:bg-accent/20 transition-colors text-foreground font-medium"
+                           onClick={() => setIsMenuOpen(false)}
+                        >
+                           Blogs
+                        </Link>
+                        <Link
                            href="/projects"
                            className="px-4 py-2 rounded-lg hover:bg-accent/30 dark:hover:bg-accent/20 transition-colors text-foreground font-medium"
                            onClick={() => setIsMenuOpen(false)}

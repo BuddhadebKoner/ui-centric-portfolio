@@ -9,6 +9,7 @@ import CardsSection from "@/components/CardsSection";
 import About from "@/components/About";
 import Footer from "@/components/Footer";
 import LandingPagesSection from "@/components/LandingPagesSection";
+import BlogsSection from "@/components/BlogsSection";
 import { LogoLoop } from "@/components/LogoLoop";
 import {
   SiJavascript,
@@ -156,6 +157,7 @@ export default function Home() {
           <EventsSection />
           <LandingPagesSection />
           <ProjectsSection />
+          <BlogsSection />
           <YouTubeSection />
           <CardsSection />
           <About />

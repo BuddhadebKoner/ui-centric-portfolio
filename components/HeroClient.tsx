@@ -128,7 +128,7 @@ export function HeroButtons() {
                   </svg>
                </button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[500px] bg-background/20 backdrop-blur-xl border border-border/50 shadow-2xl">
+            <DialogContent className="sm:max-w-[500px] bg-background/95 dark:bg-background/90 backdrop-blur-xl border border-border shadow-2xl">
                <DialogHeader>
                   <DialogTitle className="text-2xl font-semibold text-foreground">
                      Let&apos;s Work Together
@@ -177,7 +177,7 @@ export function HeroButtons() {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-2 bg-white/5 backdrop-blur-sm border border-border/30 rounded-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-highlight/50 focus:border-highlight/50 hover:bg-white/10 transition-all"
+                        className="w-full px-4 py-2 bg-card/80 backdrop-blur-sm border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-highlight focus:border-highlight transition-all"
                      />
                   </div>
 
@@ -193,7 +193,7 @@ export function HeroButtons() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-2 bg-white/5 backdrop-blur-sm border border-border/30 rounded-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-highlight/50 focus:border-highlight/50 hover:bg-white/10 transition-all"
+                        className="w-full px-4 py-2 bg-card/80 backdrop-blur-sm border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-highlight focus:border-highlight transition-all"
                      />
                   </div>
 
@@ -209,7 +209,7 @@ export function HeroButtons() {
                         value={formData.mobile}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-2 bg-white/5 backdrop-blur-sm border border-border/30 rounded-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-highlight/50 focus:border-highlight/50 hover:bg-white/10 transition-all"
+                        className="w-full px-4 py-2 bg-card/80 backdrop-blur-sm border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-highlight focus:border-highlight transition-all"
                      />
                   </div>
 
@@ -224,7 +224,7 @@ export function HeroButtons() {
                         placeholder="Your Company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-2 bg-white/5 backdrop-blur-sm border border-border/30 rounded-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-highlight/50 focus:border-highlight/50 hover:bg-white/10 transition-all"
+                        className="w-full px-4 py-2 bg-card/80 backdrop-blur-sm border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-highlight focus:border-highlight transition-all"
                      />
                   </div>
 
@@ -240,7 +240,7 @@ export function HeroButtons() {
                         value={formData.message}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-2 bg-white/5 backdrop-blur-sm border border-border/30 rounded-lg text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-highlight/50 focus:border-highlight/50 hover:bg-white/10 transition-all resize-none"
+                        className="w-full px-4 py-2 bg-card/80 backdrop-blur-sm border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-highlight focus:border-highlight transition-all resize-none"
                      />
                   </div>
 
@@ -253,14 +253,14 @@ export function HeroButtons() {
                         id="budget"
                         value={formData.budget}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-2 bg-white/5 backdrop-blur-sm border border-border/30 rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-highlight/50 focus:border-highlight/50 hover:bg-white/10 transition-all"
+                        className="w-full px-4 py-2 bg-card/80 backdrop-blur-sm border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-highlight focus:border-highlight transition-all"
                      >
-                        <option value="">Select range</option>
-                        <option value="1,000-5,000">₹1,000 - ₹5,000</option>
-                        <option value="5,000-10,000">₹5,000 - ₹10,000</option>
-                        <option value="10,000-25,000">₹10,000 - ₹25,000</option>
-                        <option value="25,000-50,000">₹25,000 - ₹50,000</option>
-                        <option value="50,000+">₹50,000+</option>
+                        <option value="" className="bg-background text-foreground">Select range</option>
+                        <option value="1,000-5,000" className="bg-background text-foreground">₹1,000 - ₹5,000</option>
+                        <option value="5,000-10,000" className="bg-background text-foreground">₹5,000 - ₹10,000</option>
+                        <option value="10,000-25,000" className="bg-background text-foreground">₹10,000 - ₹25,000</option>
+                        <option value="25,000-50,000" className="bg-background text-foreground">₹25,000 - ₹50,000</option>
+                        <option value="50,000+" className="bg-background text-foreground">₹50,000+</option>
                      </select>
                   </div>
 
