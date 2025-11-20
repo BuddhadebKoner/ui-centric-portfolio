@@ -25,23 +25,19 @@ export const blogs: Blog[] = [
    {
       id: "my-first-interview-experience",
       title: "My First Interview Experience",
-      excerpt: "15th November was my first technical interview ever. A memorable journey filled with learning and growth.",
+      excerpt: "My first technical interview as a Full Stack Developer. A nervous yet exciting journey through React, Next.js, and backend questions that taught me valuable lessons.",
       thumbnail: "https://images.unsplash.com/photo-1565728744382-61accd4aa148?q=80&w=2346&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       author: {
          name: "Buddhadeb Koner",
          avatar: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1762492868/next-portfolio/xyxj8fdggwypdx2bwdnp.png"
       },
-      date: "20 Nov 2024",
-      readTime: "4 min read",
-      tags: ["Interview", "Full Stack", "React", "Next.js"],
+      date: "15 Nov 2024",
+      readTime: "5 min read",
+      tags: ["Interview", "Full Stack", "React", "Next.js", "Career"],
       content: [
          {
             type: 'text',
-            content: '15th November was my first technical interview ever, and it was with a leading tech company. I still remember feeling **nervous but excited**.'
-         },
-         {
-            type: 'highlight',
-            content: 'This was my first step into the professional world of software development, and every question taught me something valuable.'
+            content: '**15th November** was my first technical interview ever. I still remember feeling nervous but excited.'
          },
          {
             type: 'text',
@@ -49,13 +45,13 @@ export const blogs: Blog[] = [
          },
          {
             type: 'heading',
-            content: 'React & Frontend Questions'
+            content: 'React & Frontend Deep Dive'
          },
          {
             type: 'list',
-            content: 'Technical questions asked:',
+            content: 'The interviewer fired rapid questions:',
             items: [
-               '**What is a React bundler?** – I couldn\'t answer.',
+               '**What is a React bundler?** – I couldn\'t answer this one.',
                '**What is DOM?** – Explained.',
                '**What is Virtual DOM?** – Explained.',
                '**What is `getElementById(\'root\')`?** – Explained.',
@@ -64,63 +60,97 @@ export const blogs: Blog[] = [
             ]
          },
          {
-            type: 'heading',
-            content: 'Next.js Deep Dive'
-         },
-         {
             type: 'text',
-            content: 'Then they asked about **Next.js** and I had to explain `SSR` and `CSR` – I explained the difference between server-side and client-side rendering in detail.'
-         },
-         {
-            type: 'code',
-            language: 'javascript',
-            content: '// Example of Server-Side Rendering in Next.js\nexport async function getServerSideProps() {\n  const data = await fetchData();\n  return { props: { data } };\n}'
+            content: 'I was also asked about **helmet in frontend and backend** – this caught me off guard, but I explained it as a security middleware for setting HTTP headers.'
          },
          {
             type: 'heading',
-            content: 'Practical Task'
+            content: 'Next.js Rendering Concepts'
          },
          {
             type: 'text',
-            content: 'Then they gave me a laptop and asked me to initialize a React project and create folders the way I usually do. I created the structure and explained everything **confidently**.'
+            content: 'Then they asked about **Next.js**:'
+         },
+         {
+            type: 'text',
+            content: '**"Explain SSR and CSR"** – I explained the difference between **server-side rendering** and **client-side rendering**, covering how SSR improves SEO and initial load time while CSR provides better interactivity after the first load.'
          },
          {
             type: 'heading',
-            content: 'Backend & System Design'
+            content: 'Hands-On Practical Task'
          },
          {
             type: 'text',
-            content: 'After that, more backend/system questions came:'
+            content: 'Then they gave me a laptop and asked me to **initialize a React project** and create folders the way I usually do.'
+         },
+         {
+            type: 'text',
+            content: 'I created the structure and explained everything **confidently** – showing my project organization approach with separate folders for components, pages, utils, and services.'
+         },
+         {
+            type: 'heading',
+            content: 'Backend & System Architecture'
+         },
+         {
+            type: 'text',
+            content: 'After that, more **backend and system questions** came:'
          },
          {
             type: 'list',
             content: 'Backend topics covered:',
             items: [
-               '**Aggregation Pipeline** – Explained MongoDB aggregation.',
-               '**How I used Redis** – Explained `caching` and performance optimization.',
-               '**How I used WebSocket** – Explained real-time updates.',
+               '**Aggregation Pipeline** – Explained how I use MongoDB aggregation for complex queries.',
+               '**How I used Redis** – Explained `caching` and performance optimization strategies.',
+               '**How I used WebSocket** – Explained real-time communication implementation.',
                '**DevOps knowledge** (AWS, Docker, etc.) – Shared my current level honestly.'
             ]
          },
          {
             type: 'heading',
-            content: 'Key Takeaway'
+            content: 'The Valuable Feedback'
+         },
+         {
+            type: 'text',
+            content: 'Before leaving, I asked for feedback since it was my first interview.'
          },
          {
             type: 'highlight',
-            content: '"Answer more specifically. Don\'t explain unnecessary things." - This feedback changed my approach to technical interviews forever.'
+            content: '"Answer more specifically. Don\'t explain unnecessary things."'
+         },
+         {
+            type: 'text',
+            content: 'That simple sentence hit differently. They were telling me to be **precise** and **focused** in my answers – don\'t over-explain or add unnecessary context.'
          },
          {
             type: 'heading',
-            content: 'Feedback & Learning'
+            content: 'Key Lessons Learned'
+         },
+         {
+            type: 'list',
+            content: 'What this interview taught me:',
+            items: [
+               '✅ **Be specific** – Answer the exact question asked',
+               '✅ **Don\'t over-explain** – Keep it concise and relevant',
+               '✅ **Know your gaps** – Be honest about what you don\'t know',
+               '✅ **Stay confident** – Even in practical tasks under pressure',
+               '✅ **Ask for feedback** – It\'s the best way to improve'
+            ]
+         },
+         {
+            type: 'heading',
+            content: 'Final Thoughts'
          },
          {
             type: 'text',
-            content: 'Before leaving, I asked for feedback since it was my first interview. The interviewer gave me constructive criticism that helped me understand the importance of **concise and targeted answers**.'
+            content: 'Overall, it was a **great learning experience**. I understood where I\'m strong, where I need to improve, and how to give clear, targeted answers in technical interviews.'
          },
          {
             type: 'text',
-            content: 'Overall, it was a **great learning experience**. I understood where I\'m strong, where I need to improve, and how to give clear answers. A memorable first step in my journey! 🚀'
+            content: 'A memorable first step in my journey. 🚀'
+         },
+         {
+            type: 'highlight',
+            content: 'First interviews are not about perfection – they\'re about learning, growth, and understanding what the industry expects from you.'
          }
       ]
    },

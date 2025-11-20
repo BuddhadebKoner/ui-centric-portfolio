@@ -3,10 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { blogs } from "@/data/blogs";
 import { notFound } from "next/navigation";
+import { Share2, Copy, Check } from "lucide-react";
 
 export default function BlogDetailPage() {
    const params = useParams();
@@ -17,6 +19,112 @@ export default function BlogDetailPage() {
    if (!blog) {
       notFound();
    }
+
+   const [copied, setCopied] = useState(false);
+
+   // Share or copy link function
+   const handleShare = async () => {
+      const shareUrl = window.location.href;
+      const shareData = {
+         title: blog.title,
+         text: blog.excerpt,
+         url: shareUrl
+      };
+
+      // Check if Web Share API is supported
+      if (navigator.share) {
+         try {
+            await navigator.share(shareData);
+         } catch (err) {
+            // If user cancels, fallback to copy
+            if (err instanceof Error && err.name !== 'AbortError') {
+               copyToClipboard(shareUrl);
+            }
+         }
+      } else {
+         // Fallback to copy to clipboard
+         copyToClipboard(shareUrl);
+      }
+   };
+
+   const copyToClipboard = (text: string) => {
+      navigator.clipboard.writeText(text).then(() => {
+         setCopied(true);
+         setTimeout(() => setCopied(false), 2000);
+      });
+   };
+
+   // Update document title and meta tags for SEO
+   useEffect(() => {
+      document.title = `${blog.title} | Buddhadeb Koner`;
+
+      // Update meta description
+      let metaDescription = document.querySelector('meta[name="description"]');
+      if (!metaDescription) {
+         metaDescription = document.createElement('meta');
+         metaDescription.setAttribute('name', 'description');
+         document.head.appendChild(metaDescription);
+      }
+      metaDescription.setAttribute('content', blog.excerpt);
+
+      // Update Open Graph tags
+      let ogTitle = document.querySelector('meta[property="og:title"]');
+      if (!ogTitle) {
+         ogTitle = document.createElement('meta');
+         ogTitle.setAttribute('property', 'og:title');
+         document.head.appendChild(ogTitle);
+      }
+      ogTitle.setAttribute('content', blog.title);
+
+      let ogDescription = document.querySelector('meta[property="og:description"]');
+      if (!ogDescription) {
+         ogDescription = document.createElement('meta');
+         ogDescription.setAttribute('property', 'og:description');
+         document.head.appendChild(ogDescription);
+      }
+      ogDescription.setAttribute('content', blog.excerpt);
+
+      let ogImage = document.querySelector('meta[property="og:image"]');
+      if (!ogImage) {
+         ogImage = document.createElement('meta');
+         ogImage.setAttribute('property', 'og:image');
+         document.head.appendChild(ogImage);
+      }
+      ogImage.setAttribute('content', blog.thumbnail);
+
+      // Update Twitter Card tags
+      let twitterCard = document.querySelector('meta[name="twitter:card"]');
+      if (!twitterCard) {
+         twitterCard = document.createElement('meta');
+         twitterCard.setAttribute('name', 'twitter:card');
+         document.head.appendChild(twitterCard);
+      }
+      twitterCard.setAttribute('content', 'summary_large_image');
+
+      let twitterTitle = document.querySelector('meta[name="twitter:title"]');
+      if (!twitterTitle) {
+         twitterTitle = document.createElement('meta');
+         twitterTitle.setAttribute('name', 'twitter:title');
+         document.head.appendChild(twitterTitle);
+      }
+      twitterTitle.setAttribute('content', blog.title);
+
+      let twitterDescription = document.querySelector('meta[name="twitter:description"]');
+      if (!twitterDescription) {
+         twitterDescription = document.createElement('meta');
+         twitterDescription.setAttribute('name', 'twitter:description');
+         document.head.appendChild(twitterDescription);
+      }
+      twitterDescription.setAttribute('content', blog.excerpt);
+
+      let twitterImage = document.querySelector('meta[name="twitter:image"]');
+      if (!twitterImage) {
+         twitterImage = document.createElement('meta');
+         twitterImage.setAttribute('name', 'twitter:image');
+         document.head.appendChild(twitterImage);
+      }
+      twitterImage.setAttribute('content', blog.thumbnail);
+   }, [blog]);
 
    return (
       <div className="min-h-screen">
@@ -58,10 +166,29 @@ export default function BlogDetailPage() {
 
                {/* Blog Header */}
                <div className="mb-8">
-                  {/* Title */}
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
-                     {blog.title}
-                  </h1>
+                  {/* Title with Share Button */}
+                  <div className="flex items-start justify-between gap-3 mb-4 sm:mb-6">
+                     <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground flex-1">
+                        {blog.title}
+                     </h1>
+                     <button
+                        onClick={handleShare}
+                        className="flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm bg-card/80 backdrop-blur-sm border border-border rounded-lg text-muted-foreground hover:text-foreground hover:border-highlight transition-all duration-300 group mt-1"
+                        title={copied ? "Link copied!" : "Share this blog"}
+                     >
+                        {copied ? (
+                           <>
+                              <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                              <span className="hidden sm:inline">Copied!</span>
+                           </>
+                        ) : (
+                           <>
+                              <Share2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:scale-110 transition-transform" />
+                              <span className="hidden sm:inline">Share</span>
+                           </>
+                        )}
+                     </button>
+                  </div>
 
                   {/* Author Profile Badge */}
                   <div className="flex items-center justify-between flex-wrap gap-3 sm:gap-4 mb-4 sm:mb-6">
