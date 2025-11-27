@@ -8,7 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { blogs } from "@/data/blogs";
 import { notFound } from "next/navigation";
-import { Share2, Copy, Check } from "lucide-react";
+import { Share2, Check } from "lucide-react";
 
 export default function BlogDetailPage() {
    const params = useParams();

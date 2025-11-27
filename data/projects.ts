@@ -19,6 +19,14 @@ export const projects: Project[] = [
       isNew: true,
    },
    {
+      title: "E-commerce Platform",
+      description: "A comprehensive e-commerce platform with modern UI and seamless user experience.",
+      demoUrl: "https://zidio-project-three.vercel.app/",
+      sourceCodeUrl: "https://github.com/BuddhadebKoner/zidio-project-three",
+      image: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1753897864/Screenshot_2025-07-30_at_23-17-49_E-commerce_turllc.png",
+      tags: ["React-v19", "Vite", "TanStack Query", "Tailwind CSS-v4.0"],
+   },
+   {
       title: "AI powered Portfolio",
       description: "An AI-powered full-stack portfolio website that showcases your skills and projects with GEMINI AI integration.",
       demoUrl: "https://full-stack-portfolio-nine-theta.vercel.app/",

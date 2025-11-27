@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback, useMemo } from "react";
 import Image from "next/image";
-import { Music } from "lucide-react";
 
 interface NowPlaying {
    isPlaying: boolean;
