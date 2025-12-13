@@ -5,3 +5,4 @@ export * from "./youtube";
 export * from "./landing-pages";
 export * from "./tech-stack";
 export * from "./personal-info";
+export * from "./experience";

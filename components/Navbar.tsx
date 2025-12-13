@@ -158,6 +158,13 @@ export default function Navbar() {
                            Events
                         </Link>
                         <Link
+                           href="/experience"
+                           className="px-4 py-2 rounded-lg hover:bg-accent/30 dark:hover:bg-accent/20 transition-colors text-foreground font-medium"
+                           onClick={() => setIsMenuOpen(false)}
+                        >
+                           Experience
+                        </Link>
+                        <Link
                            href="/#about"
                            className="px-4 py-2 rounded-lg hover:bg-accent/30 dark:hover:bg-accent/20 transition-colors text-foreground font-medium"
                            onClick={() => setIsMenuOpen(false)}
