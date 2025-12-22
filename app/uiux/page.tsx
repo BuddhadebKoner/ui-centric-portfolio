@@ -211,7 +211,7 @@ export default function UIUXPage() {
                      Interested in working together?
                   </h2>
                   <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
-                     Let's create something amazing together. I'm always open to discussing new projects and design opportunities.
+                     Let&apos;s create something amazing together. I&apos;m always open to discussing new projects and design opportunities.
                   </p>
                   <Link
                      href="/#contact"

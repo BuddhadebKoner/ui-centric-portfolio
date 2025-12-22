@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { experiences } from "@/data/experience";
-import { Calendar, ArrowUpRight, Sparkles } from "lucide-react";
+import { Calendar, ArrowUpRight } from "lucide-react";
 
 export default function ExperienceSection() {
    return (
