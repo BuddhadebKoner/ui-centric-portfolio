@@ -23,6 +23,307 @@ export interface Blog {
 
 export const blogs: Blog[] = [
    {
+      id: "pcs-global-interview-2025",
+      title: "Last Interview Experience in 2025: PCS Global Pvt Ltd",
+      excerpt: "A comprehensive account of my final interview experience of 2025 with PCS Global Pvt Ltd, featuring technical discussions on AI, frontend-backend integration, and invaluable career guidance.",
+      thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      author: {
+         name: "Buddhadeb Koner",
+         avatar: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1762492868/next-portfolio/xyxj8fdggwypdx2bwdnp.png"
+      },
+      date: "28 Dec 2025",
+      readTime: "7 min read",
+      tags: ["Interview", "Career", "AI", "Full Stack", "Campus Placement"],
+      content: [
+         {
+            type: 'text',
+            content: 'As 2025 draws to a close, I had the privilege of experiencing what turned out to be my final interview of the year with **PCS Global Pvt Ltd**. This wasn\'t just another interview—it was a journey of technical evaluation, personal growth, and inspiring mentorship that left a lasting impact on my career perspective.'
+         },
+         {
+            type: 'highlight',
+            content: 'Sometimes, the most valuable takeaway from an interview isn\'t just the technical questions—it\'s the guidance and motivation that shapes your entire career mindset.'
+         },
+         {
+            type: 'heading',
+            content: 'The Aptitude Challenge'
+         },
+         {
+            type: 'text',
+            content: 'The recruitment process kicked off with an **Aptitude Round** designed to filter candidates based on logical reasoning, quantitative ability, and problem-solving skills. The competition was intense, with numerous students vying for limited positions.'
+         },
+         {
+            type: 'text',
+            content: 'When the results were announced, **16 students**—including myself—successfully cleared this initial screening. The feeling was a mix of relief and anticipation. Making it past the first hurdle meant we were one step closer, but the real challenge was yet to come.'
+         },
+         {
+            type: 'list',
+            content: 'What the Aptitude Round tested:',
+            items: [
+               '**Logical Reasoning** - Pattern recognition and analytical thinking',
+               '**Quantitative Aptitude** - Mathematical and numerical problem-solving',
+               '**Verbal Ability** - Communication and comprehension skills',
+               '**Technical Awareness** - Basic understanding of technology concepts'
+            ]
+         },
+         {
+            type: 'heading',
+            content: 'The Final Interview Round'
+         },
+         {
+            type: 'text',
+            content: 'The final round was meticulously structured, focusing primarily on three key areas: our **curriculum vitae**, **fundamental concepts**, and **clarity of understanding**. The interviewers weren\'t just looking for rote answers—they wanted to assess our depth of knowledge and practical thinking.'
+         },
+         {
+            type: 'text',
+            content: 'The interview began traditionally with a **self-introduction**, where I briefly outlined my educational background, technical skills, projects, and career aspirations. This set the tone for the rest of the conversation, as subsequent questions were tailored based on what I mentioned in my CV.'
+         },
+         {
+            type: 'highlight',
+            content: 'Pro Tip: Your CV is your story. Be ready to defend every line, every project, and every skill you\'ve listed. If it\'s on your CV, you should be an expert on it.'
+         },
+         {
+            type: 'heading',
+            content: 'AI & The Changing Tech Landscape'
+         },
+         {
+            type: 'text',
+            content: 'One of the most engaging parts of the interview was a thought-provoking discussion about **how AI is rapidly capturing the market** and transforming the technology industry. The interviewer brought up an interesting example—the **Atari messaging app**—to illustrate how AI integration is becoming a competitive differentiator in modern applications.'
+         },
+         {
+            type: 'text',
+            content: 'We discussed several perspectives:'
+         },
+         {
+            type: 'list',
+            content: 'The AI Revolution discussion covered:',
+            items: [
+               '**Market Disruption** - How AI-powered tools are replacing traditional workflows',
+               '**Competitive Advantage** - Companies leveraging AI to stay ahead',
+               '**Developer Adaptation** - The need to integrate AI skills into our toolkit',
+               '**Ethical Considerations** - Responsible AI usage and its implications',
+               '**Future Opportunities** - Emerging roles in AI integration and development'
+            ]
+         },
+         {
+            type: 'text',
+            content: 'This wasn\'t just a Q&A session—it felt like a **collaborative discussion** where the interviewer was genuinely interested in understanding my perspective on these industry shifts. It highlighted the importance of staying updated with technological trends beyond just coding skills.'
+         },
+         {
+            type: 'heading',
+            content: 'Technical Deep Dive: Core Questions'
+         },
+         {
+            type: 'text',
+            content: 'The interview transitioned into more **technical territory**, testing my understanding of fundamental web development concepts. Here are the key questions I encountered:'
+         },
+         {
+            type: 'text',
+            content: '**Question 1: How do you connect frontend and backend?**'
+         },
+         {
+            type: 'text',
+            content: 'I explained that the primary method is through **REST APIs (Representational State Transfer)**. The frontend makes HTTP requests (GET, POST, PUT, DELETE) to backend endpoints, which process the requests and return JSON responses.'
+         },
+         {
+            type: 'code',
+            language: 'javascript',
+            content: '// Example: Frontend making API call\nconst fetchUserData = async () => {\n  try {\n    const response = await fetch(\'https://api.example.com/users\', {\n      method: \'GET\',\n      headers: {\n        \'Content-Type\': \'application/json\',\n        \'Authorization\': `Bearer ${token}`\n      }\n    });\n    const data = await response.json();\n    return data;\n  } catch (error) {\n    console.error(\'API Error:\', error);\n  }\n};'
+         },
+         {
+            type: 'text',
+            content: 'I also mentioned alternative approaches like **GraphQL**, **WebSocket** for real-time communication, and **gRPC** for high-performance scenarios. The key is understanding when to use each approach based on application requirements.'
+         },
+         {
+            type: 'heading',
+            content: 'The Browser Ecosystem Question'
+         },
+         {
+            type: 'text',
+            content: '**Question 2: Which browser do you use, and why?**'
+         },
+         {
+            type: 'text',
+            content: 'This question initially seemed straightforward, but it opened up an interesting conversation about the **evolving browser landscape**. I explained that the traditional browser ecosystem (Chrome, Firefox, Safari, Edge) is being disrupted by AI-powered alternatives.'
+         },
+         {
+            type: 'list',
+            content: 'My answer covered:',
+            items: [
+               '**Traditional Browsers** - Chrome for DevTools, Firefox for privacy-focused development',
+               '**AI-Enhanced Browsers** - Perplexity Commit for code-specific searches',
+               '**ChatGPT Browser Features** - AI agents that support workflow automation',
+               '**Developer Considerations** - Cross-browser compatibility and testing',
+               '**Future Trends** - AI-native browsers changing how we interact with the web'
+            ]
+         },
+         {
+            type: 'text',
+            content: 'I emphasized that modern developers need to be aware of these **AI-powered browsing tools** that enhance productivity through intelligent workflows, code suggestions, and context-aware assistance. The interviewer appreciated this forward-thinking perspective.'
+         },
+         {
+            type: 'heading',
+            content: 'Website Responsiveness: A Critical Skill'
+         },
+         {
+            type: 'text',
+            content: '**Question 3: What is website responsiveness, and why is it important?**'
+         },
+         {
+            type: 'text',
+            content: 'I explained that **responsive web design** ensures websites adapt seamlessly across different screen sizes and devices—from large desktop monitors to smartphones and tablets.'
+         },
+         {
+            type: 'list',
+            content: 'Key concepts I discussed:',
+            items: [
+               '**Fluid Grids** - Using relative units (%, em, rem) instead of fixed pixels',
+               '**Flexible Images** - Images that scale within their containers',
+               '**Media Queries** - CSS rules that apply styles based on device characteristics',
+               '**Mobile-First Approach** - Designing for mobile first, then scaling up',
+               '**Viewport Meta Tag** - Ensuring proper rendering on mobile devices'
+            ]
+         },
+         {
+            type: 'code',
+            language: 'css',
+            content: '/* Example: Responsive design pattern */\n.container {\n  width: 100%;\n  max-width: 1200px;\n  padding: 0 20px;\n  margin: 0 auto;\n}\n\n/* Mobile First */\n.card {\n  width: 100%;\n}\n\n/* Tablet */\n@media (min-width: 768px) {\n  .card {\n    width: 50%;\n  }\n}\n\n/* Desktop */\n@media (min-width: 1024px) {\n  .card {\n    width: 33.333%;\n  }\n}'
+         },
+         {
+            type: 'highlight',
+            content: 'Responsive design isn\'t just about aesthetics—it directly impacts user experience, SEO rankings, and conversion rates. In today\'s mobile-first world, it\'s non-negotiable.'
+         },
+         {
+            type: 'heading',
+            content: 'Words of Wisdom from Sunit Chaudhuri'
+         },
+         {
+            type: 'text',
+            content: 'What truly elevated this experience beyond a typical interview was the **motivational session** led by **Sunit Chaudhuri** 🌟. His words resonated deeply with all 16 shortlisted students, providing not just career advice but a complete mindset shift.'
+         },
+         {
+            type: 'text',
+            content: 'Mr. Chaudhuri emphasized that success isn\'t merely about clearing interviews or securing placements—it\'s about **continuous self-improvement**, **consistency**, and **skill-building**. He encouraged us to focus on the journey rather than just the destination.'
+         },
+         {
+            type: 'list',
+            content: 'Key takeaways from his guidance:',
+            items: [
+               '**Focus on Growth, Not Just Results** - Develop skills that compound over time',
+               '**Consistency Over Intensity** - Daily practice beats sporadic effort',
+               '**Learn Fundamentals Deeply** - Trendy frameworks come and go, but fundamentals stay',
+               '**Build Real Projects** - Theory is good, but implementation reveals true understanding',
+               '**Network and Collaborate** - Your connections are as valuable as your code',
+               '**Stay Curious** - Technology evolves rapidly; continuous learning is essential',
+               '**Handle Rejections Gracefully** - Every "no" brings you closer to the right "yes"'
+            ]
+         },
+         {
+            type: 'highlight',
+            content: 'Mr. Chaudhuri\'s message was clear: Don\'t chase jobs—build skills. When your skills are strong enough, opportunities will chase you.'
+         },
+         {
+            type: 'text',
+            content: 'His energy was infectious, and his genuine care for student development was evident. He didn\'t just evaluate candidates—he **mentored** us, providing clarity on what it takes to build a successful career in technology.'
+         },
+         {
+            type: 'heading',
+            content: 'The Atmosphere & Experience'
+         },
+         {
+            type: 'text',
+            content: 'The entire campus drive was professionally organized by the **PCS Global team**. From registration to the interview process, everything was seamless and well-coordinated. The interviewers were respectful, encouraging, and genuinely interested in understanding our capabilities rather than just testing us.'
+         },
+         {
+            type: 'text',
+            content: 'What made the experience memorable wasn\'t just the technical rigor—it was the **human touch**. The team understood that students were nervous and made conscious efforts to create a comfortable environment where we could showcase our best selves.'
+         },
+         {
+            type: 'heading',
+            content: 'Reflections & Learnings'
+         },
+         {
+            type: 'text',
+            content: 'Looking back at this interview experience, I realize it taught me lessons that extend far beyond technical knowledge:'
+         },
+         {
+            type: 'list',
+            content: 'Personal takeaways:',
+            items: [
+               '✅ **Holistic Preparation Matters** - Technical skills + soft skills + industry awareness',
+               '✅ **Stay Updated** - Know what\'s happening in the tech world (AI, emerging tools, trends)',
+               '✅ **Communication is Key** - How you explain matters as much as what you know',
+               '✅ **CV Authenticity** - Only list what you truly understand; be ready to defend everything',
+               '✅ **Mindset Matters** - Approach interviews as learning opportunities, not just evaluations',
+               '✅ **Networking Counts** - The connections you make during these processes are invaluable'
+            ]
+         },
+         {
+            type: 'heading',
+            content: 'Awaiting Results with Optimism'
+         },
+         {
+            type: 'text',
+            content: 'The final results are expected to be announced by **Tuesday**. Regardless of the outcome, I\'m genuinely grateful for this opportunity. The experience itself has been enriching—from the technical discussions to the motivational insights.'
+         },
+         {
+            type: 'text',
+            content: 'Whether I receive an offer or not, I\'ve gained something more valuable: **clarity** about where I stand, **confidence** in my abilities, and **direction** for where I need to improve.'
+         },
+         {
+            type: 'highlight',
+            content: 'The outcome of one interview doesn\'t define your worth as a developer. What matters is what you learn, how you grow, and how you apply that knowledge moving forward.'
+         },
+         {
+            type: 'heading',
+            content: 'Gratitude & Acknowledgments'
+         },
+         {
+            type: 'text',
+            content: 'A heartfelt **thank you** to **Sunit Chaudhuri** and the entire **PCS Global Pvt Ltd team** for organizing such a meaningful campus drive. Your commitment to not just recruiting talent but also nurturing and guiding students is truly commendable.'
+         },
+         {
+            type: 'text',
+            content: 'Thank you for helping students like me gain clarity, confidence, and motivation toward building a strong career in technology. This experience has been invaluable, and I\'m excited about the journey ahead, wherever it may lead.'
+         },
+         {
+            type: 'heading',
+            content: 'Final Thoughts: Closing the Year Strong'
+         },
+         {
+            type: 'text',
+            content: 'As 2025 comes to an end, this interview serves as a perfect reflection point. It encapsulates everything I\'ve learned this year: the importance of **fundamentals**, the necessity of **continuous learning**, and the power of **the right mindset**.'
+         },
+         {
+            type: 'text',
+            content: 'To fellow students preparing for interviews: approach them with curiosity, not fear. See them as conversations, not interrogations. Prepare thoroughly, but also remember that your worth isn\'t determined by a single interview outcome.'
+         },
+         {
+            type: 'list',
+            content: 'My advice for your next interview:',
+            items: [
+               '📚 **Master the Fundamentals** - Deep understanding beats surface-level knowledge',
+               '🚀 **Build Real Projects** - Showcase practical implementation, not just theory',
+               '🗣️ **Practice Communication** - Explain concepts clearly and confidently',
+               '🧠 **Stay Updated** - Know industry trends and emerging technologies',
+               '💪 **Focus on Growth** - Every interview is a learning opportunity',
+               '🌟 **Be Authentic** - Be yourself; the right company will appreciate that'
+            ]
+         },
+         {
+            type: 'highlight',
+            content: 'The best interview advice I received: Don\'t try to be perfect. Be prepared, be honest, and be willing to learn. That\'s what companies truly value.'
+         },
+         {
+            type: 'text',
+            content: 'Here\'s to closing 2025 with valuable experiences and entering 2026 with renewed determination and clarity. Whatever the result, I\'m ready for what comes next. 🚀'
+         },
+         {
+            type: 'text',
+            content: 'Keep learning, keep building, and keep growing. The journey matters more than any single destination. 💻✨'
+         }
+      ]
+   },
+   {
       id: "small-mistakes-big-lessons",
       title: "Small Mistakes, Big Lessons: Learning to Take Things Seriously",
       excerpt: "A personal reflection on how tiny moments of carelessness can create significant setbacks, and why being mindful in everything we do matters more than we think.",
