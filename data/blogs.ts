@@ -24,14 +24,14 @@ export interface Blog {
 export const blogs: Blog[] = [
    {
       id: "pcs-global-interview-2025",
-      title: "Last Interview Experience in 2025: PCS Global Pvt Ltd",
+      title: "Interview Experience in: PCS Global Pvt Ltd",
       excerpt: "A comprehensive account of my final interview experience of 2025 with PCS Global Pvt Ltd, featuring technical discussions on AI, frontend-backend integration, and invaluable career guidance.",
-      thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      thumbnail: "https://images.unsplash.com/photo-1565688534245-05d6b5be184a?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       author: {
          name: "Buddhadeb Koner",
          avatar: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1762492868/next-portfolio/xyxj8fdggwypdx2bwdnp.png"
       },
-      date: "28 Dec 2025",
+      date: "27 Dec 2025",
       readTime: "7 min read",
       tags: ["Interview", "Career", "AI", "Full Stack", "Campus Placement"],
       content: [
