@@ -13,7 +13,7 @@ export default function Hero() {
                   <HeroClient />
 
                   {/* Spotify Now Playing */}
-                  <SpotifyNowPlaying />
+                  {/* <SpotifyNowPlaying /> */}
 
                   {/* Heading */}
                   <h1 className="font-[family-name:var(--font-manrope)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[72px] font-semibold leading-tight lg:leading-[1.1]">
