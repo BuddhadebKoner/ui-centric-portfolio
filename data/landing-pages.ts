@@ -36,7 +36,7 @@ export const landingPages: LandingPage[] = [
       title: "Modern Developer Portfolio",
       url: "buddhadebkoner.vercel.app",
       imageSrc: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1741678714/next-portfolio/works/zugytqjxnvodwx8cwrob.png",
-      demoUrl: "https://buddhadebkoner.vercel.app/",
+      demoUrl: "https://buddhadebkoner.in/",
       description: "A sleek and modern portfolio design tailored for developers with elegant interface.",
       tags: ["Next.js-v15", "React-v19", "Tailwind CSS-v4.0"],
    },

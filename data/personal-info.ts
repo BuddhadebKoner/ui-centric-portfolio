@@ -26,7 +26,7 @@ export const personalInfo: PersonalInfo = {
    avatar: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1741678714/next-portfolio/avatar.jpg",
    location: "Kolkata, India",
    email: "buddhadebkoner@gmail.com",
-   website: "https://buddhadebkoner.vercel.app",
+   website: "https://buddhadebkoner.in",
 };
 
 export const socialLinks: SocialLinks = {

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
       title: "Projects - Buddhadeb Koner | FullStack Web Developer",
       description:
          "Explore the portfolio of projects by Buddhadeb Koner. Featuring full-stack web applications built with React, Next.js, MERN stack, and modern web technologies.",
-      url: "https://buddhadebkoner.vercel.app/projects",
+      url: "https://buddhadebkoner.in/projects",
       images: [
          {
             url: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1753897864/Screenshot_2025-07-30_at_23-17-49_E-commerce_turllc.png",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       ],
    },
    alternates: {
-      canonical: "https://buddhadebkoner.vercel.app/projects",
+      canonical: "https://buddhadebkoner.in/projects",
    },
 };
 

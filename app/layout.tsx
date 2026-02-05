@@ -18,7 +18,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://buddhadebkoner.vercel.app"),
+  metadataBase: new URL("https://buddhadebkoner.in"),
   title: {
     default: "Buddhadeb Koner | FullStack Web Developer",
     template: "%s | Buddhadeb Koner",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     "Freelance Developer",
     "Remote Developer",
   ],
-  authors: [{ name: "Buddhadeb Koner", url: "https://buddhadebkoner.vercel.app" }],
+  authors: [{ name: "Buddhadeb Koner", url: "https://buddhadebkoner.in" }],
   creator: "Buddhadeb Koner",
   publisher: "Buddhadeb Koner",
   formatDetection: {
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "Buddhadeb Koner | FullStack Web Developer",
     description:
       "Discover the personal portfolio of Buddhadeb Koner – a creative FullStack Web Developer producing great software.",
-    url: "https://buddhadebkoner.vercel.app/",
+    url: "https://buddhadebkoner.in/",
     siteName: "Buddhadeb Koner",
     images: [
       {
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://buddhadebkoner.vercel.app/",
+    canonical: "https://buddhadebkoner.in/",
   },
   verification: {
     google: "tIuTbVILH-G_9w4nWpFt1f6Ic9oaKmSLhbReePTbMCA",
@@ -110,7 +110,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Buddhadeb Koner",
-    url: "https://buddhadebkoner.vercel.app/",
+    url: "https://buddhadebkoner.in/",
     image:
       "https://res.cloudinary.com/dsfztnp9x/image/upload/v1739285469/next-portfolio/xyxj8fdggwypdx2bwdnp.png",
     jobTitle: "FullStack Web Developer",

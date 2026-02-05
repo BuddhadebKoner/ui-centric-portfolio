@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       title: "Experience - Buddhadeb Koner | FullStack Web Developer",
       description:
          "Professional experience of Buddhadeb Koner as a Full Stack Developer. Explore my journey in building scalable applications, leading teams, and solving complex technical challenges.",
-      url: "https://buddhadebkoner.vercel.app/experience",
+      url: "https://buddhadebkoner.in/experience",
       siteName: "Buddhadeb Koner",
       images: [
          {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       images:
          "https://res.cloudinary.com/dsfztnp9x/image/upload/v1765629470/devsindiaHome_vjpxz5.png",
    },
-   alternates: { canonical: "https://buddhadebkoner.vercel.app/experience" },
+   alternates: { canonical: "https://buddhadebkoner.in/experience" },
 };
 
 export default function ExperiencePage() {

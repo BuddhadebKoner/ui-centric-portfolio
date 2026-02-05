@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       title: "Events - Buddhadeb Koner | FullStack Web Developer",
       description:
          "Events, talks and workshops conducted or attended by Buddhadeb Koner. Find workshop recaps, photos, and links.",
-      url: "https://buddhadebkoner.vercel.app/events",
+      url: "https://buddhadebkoner.in/events",
       siteName: "Buddhadeb Koner",
       images: [
          {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
       images:
          "https://res.cloudinary.com/dsfztnp9x/image/upload/v1762356238/gdg_durgapur_1_hpbkqa.jpg",
    },
-   alternates: { canonical: "https://buddhadebkoner.vercel.app/events" },
+   alternates: { canonical: "https://buddhadebkoner.in/events" },
 };
 
 export default function EventsPage() {

@@ -45,7 +45,7 @@ export const projects: Project[] = [
    {
       title: "Modern Portfolio Developers",
       description: "Experience a sleek and modern portfolio design tailored for developers with elegant, responsive interface.",
-      demoUrl: "https://buddhadebkoner.vercel.app/",
+      demoUrl: "https://buddhadebkoner.in/",
       sourceCodeUrl: "https://github.com/BuddhadebKoner/devaloper-modern-portfolio/",
       image: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1741678714/next-portfolio/works/zugytqjxnvodwx8cwrob.png",
       tags: ["Next.js-v15", "React-v19", "Tailwind CSS-v4.0"],

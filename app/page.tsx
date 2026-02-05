@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Home - Buddhadeb Koner | FullStack Web Developer",
     description:
       "Welcome to the personal portfolio of Buddhadeb Koner, a creative FullStack Web Developer producing great software.",
-    url: "https://buddhadebkoner.vercel.app/",
+    url: "https://buddhadebkoner.in/",
   },
   twitter: {
     title: "Home - Buddhadeb Koner | FullStack Web Developer",

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
       title: "Landing Pages - Buddhadeb Koner | FullStack Web Developer",
       description:
          "Discover beautiful landing page designs created by Buddhadeb Koner. Showcasing modern UI/UX designs for e-commerce, portfolios, and web applications.",
-      url: "https://buddhadebkoner.vercel.app/landing-pages",
+      url: "https://buddhadebkoner.in/landing-pages",
       images: [
          {
             url: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1750497000/Screenshot_2025-06-20_at_10-31-47_Buddhadeb_Koner_FullStack_Web_Developer_d5qnbk.png",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       ],
    },
    alternates: {
-      canonical: "https://buddhadebkoner.vercel.app/landing-pages",
+      canonical: "https://buddhadebkoner.in/landing-pages",
    },
 };
 

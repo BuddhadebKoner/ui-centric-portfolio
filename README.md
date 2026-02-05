@@ -1,6 +1,6 @@
 #  Developers Portfolio
 
-[![developers portfolio](https://res.cloudinary.com/dsfztnp9x/image/upload/v1762357965/portfolioss_xyk0k1.png)](https://buddhadebkoner.vercel.app/)
+[![developers portfolio](https://res.cloudinary.com/dsfztnp9x/image/upload/v1762357965/portfolioss_xyk0k1.png)](https://buddhadebkoner.in/)
 
 ---
 
