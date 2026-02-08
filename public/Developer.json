@@ -1,0 +1,75 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "@context": "https://schema.org",
+   "@type": "Person",
+   "name": "Buddhadeb Koner",
+   "jobTitle": "FullStack Web Developer",
+   "description": "Creative FullStack Web Developer specializing in MERN stack, Next.js, and modern web technologies. Building high-performance web applications with focus on user experience.",
+   "url": "https://buddhadebkoner.in",
+   "image": "https://res.cloudinary.com/dsfztnp9x/image/upload/v1739285469/next-portfolio/xyxj8fdggwypdx2bwdnp.png",
+   "sameAs": [
+      "https://github.com/BuddhadebKoner",
+      "https://twitter.com/buddhadeb_koner",
+      "https://www.linkedin.com/in/buddhadeb-koner",
+      "https://leetcode.com/BuddhadebKoner"
+   ],
+   "email": "buddhadebkoner@proton.me",
+   "nationality": "Indian",
+   "knowsAbout": [
+      "Web Development",
+      "FullStack Development",
+      "MERN Stack",
+      "Next.js",
+      "React",
+      "Node.js",
+      "TypeScript",
+      "JavaScript",
+      "UI/UX Design",
+      "MongoDB",
+      "Express.js",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Docker",
+      "AWS"
+   ],
+   "hasOccupation": {
+      "@type": "Occupation",
+      "name": "FullStack Web Developer",
+      "skills": [
+         "Frontend Development",
+         "Backend Development",
+         "Database Design",
+         "API Development",
+         "UI/UX Design",
+         "DevOps",
+         "Cloud Computing"
+      ]
+   },
+   "knowsLanguage": [
+      {
+         "@type": "Language",
+         "name": "English",
+         "alternateName": "en"
+      },
+      {
+         "@type": "Language",
+         "name": "Hindi",
+         "alternateName": "hi"
+      },
+      {
+         "@type": "Language",
+         "name": "Bengali",
+         "alternateName": "bn"
+      }
+   ],
+   "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Your University Name",
+      "location": "India"
+   },
+   "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN",
+      "addressLocality": "India"
+   }
+}

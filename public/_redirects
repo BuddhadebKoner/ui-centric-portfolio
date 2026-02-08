@@ -1,0 +1,19 @@
+# Redirects for buddhadebkoner.in
+# Owner: Buddhadeb Koner
+# Last Updated: February 8, 2026
+
+# Redirect www to non-www
+https://www.buddhadebkoner.in/* https://buddhadebkoner.in/:splat 301!
+
+# Redirect HTTP to HTTPS
+http://buddhadebkoner.in/* https://buddhadebkoner.in/:splat 301!
+
+# Legacy Routes (if any old URLs exist)
+# /portfolio/* /projects/:splat 301
+# /work/* /projects/:splat 301
+
+# SPA Fallback for 404s
+/* /index.html 200
+
+# Error page
+/error /error.html 200

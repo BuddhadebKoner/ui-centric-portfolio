@@ -1,0 +1,93 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "@context": "https://schema.org",
+   "@type": "ProfessionalService",
+   "name": "Buddhadeb Koner - FullStack Web Development Services",
+   "description": "Professional web development services including full-stack application development, UI/UX design, and technical consultation.",
+   "url": "https://buddhadebkoner.in",
+   "image": "https://res.cloudinary.com/dsfztnp9x/image/upload/v1739285469/next-portfolio/xyxj8fdggwypdx2bwdnp.png",
+   "priceRange": "$$",
+   "telephone": "Contact via website",
+   "email": "buddhadebkoner@proton.me",
+   "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN",
+      "addressLocality": "India"
+   },
+   "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "22.9868",
+      "longitude": "87.8550"
+   },
+   "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Web Development Services",
+      "itemListElement": [
+         {
+            "@type": "Offer",
+            "itemOffered": {
+               "@type": "Service",
+               "name": "Full-Stack Web Development",
+               "description": "End-to-end web application development using MERN stack, Next.js, and modern technologies."
+            }
+         },
+         {
+            "@type": "Offer",
+            "itemOffered": {
+               "@type": "Service",
+               "name": "Frontend Development",
+               "description": "Modern, responsive, and performant frontend applications using React, Next.js, and TypeScript."
+            }
+         },
+         {
+            "@type": "Offer",
+            "itemOffered": {
+               "@type": "Service",
+               "name": "Backend Development",
+               "description": "Scalable backend services using Node.js, Express, NestJS, and various databases."
+            }
+         },
+         {
+            "@type": "Offer",
+            "itemOffered": {
+               "@type": "Service",
+               "name": "UI/UX Design",
+               "description": "User-centered design solutions with modern aesthetics and intuitive user experience."
+            }
+         },
+         {
+            "@type": "Offer",
+            "itemOffered": {
+               "@type": "Service",
+               "name": "Technical Consultation",
+               "description": "Expert advice on technology stack selection, architecture design, and best practices."
+            }
+         }
+      ]
+   },
+   "openingHoursSpecification": [
+      {
+         "@type": "OpeningHoursSpecification",
+         "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+         ],
+         "opens": "09:00",
+         "closes": "18:00"
+      }
+   ],
+   "areaServed": {
+      "@type": "Country",
+      "name": "Worldwide"
+   },
+   "serviceType": "Web Development",
+   "provider": {
+      "@type": "Person",
+      "name": "Buddhadeb Koner",
+      "jobTitle": "FullStack Web Developer",
+      "url": "https://buddhadebkoner.in"
+   }
+}

@@ -1,0 +1,27 @@
+{
+   "name": "Buddhadeb Koner - FullStack Web Developer",
+   "short_name": "Buddhadeb Koner",
+   "description": "Personal portfolio of Buddhadeb Koner - FullStack Web Developer specializing in MERN stack, Next.js, and modern web technologies. Building high-performance web applications.",
+   "start_url": "https://buddhadebkoner.in/",
+   "scope": "/",
+   "display": "standalone",
+   "background_color": "#0a0a0a",
+   "theme_color": "#fbf1e0",
+   "orientation": "portrait-primary",
+   "icons": [
+      {
+         "src": "/favicon.ico",
+         "sizes": "any",
+         "type": "image/x-icon",
+         "purpose": "any maskable"
+      }
+   ],
+   "categories": [
+      "business",
+      "productivity",
+      "portfolio"
+   ],
+   "lang": "en",
+   "dir": "ltr",
+   "prefer_related_applications": false
+}

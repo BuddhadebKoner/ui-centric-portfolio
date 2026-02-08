@@ -1,6 +1,33 @@
-# *
+# Robots.txt for buddhadebkoner.in
+# Owner: Buddhadeb Koner
+# Last Updated: February 8, 2026
+
+# Allow all crawlers
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/static/
+
+# Crawl delay for responsible bots
+Crawl-delay: 0.5
+
+# Google Bot Specific Rules
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Crawl-delay: 0
+
+# Googlebot Image
+User-agent: Googlebot-Image
+Allow: /
+Disallow: /api/
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Crawl-delay: 1
 
 # Host
 Host: https://buddhadebkoner.in
