@@ -185,6 +185,24 @@ export default function RootLayout({
             __html: JSON.stringify(jsonLd),
           }}
         />
+
+        {/* Google Analytics */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-6YRT3D45MP"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-6YRT3D45MP');
+            `,
+          }}
+        />
       </head>
       <body className={`${manrope.variable} ${montserrat.variable} antialiased`}>
         <div className="overflow-hidden">
