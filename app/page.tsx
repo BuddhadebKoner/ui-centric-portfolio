@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import LandingPagesSection from "@/components/LandingPagesSection";
 import BlogsSection from "@/components/BlogsSection";
 import { LogoLoop } from "@/components/LogoLoop";
+import RecentBlogPopup from "@/components/RecentBlogPopup";
 import {
   SiJavascript,
   SiTypescript,
@@ -166,6 +167,9 @@ export default function Home() {
           <Footer />
         </main>
       </div>
+
+      {/* Recent Blog Popup */}
+      <RecentBlogPopup />
     </>
   );
 }
