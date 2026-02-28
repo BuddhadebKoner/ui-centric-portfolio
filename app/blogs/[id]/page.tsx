@@ -291,14 +291,16 @@ export default function BlogDetailPage() {
                               return (
                                  <div
                                     key={index}
-                                    className="relative w-full h-48 sm:h-64 md:h-80 rounded-lg overflow-hidden border border-border my-4 sm:my-6"
+                                    className="flex justify-center my-4 sm:my-6"
                                  >
-                                    <Image
-                                       src={block.content}
-                                       alt="Blog content image"
-                                       fill
-                                       className="object-cover"
-                                    />
+                                    <div className="relative w-[220px] sm:w-[260px] md:w-[300px] aspect-[9/19] rounded-2xl overflow-hidden border border-border shadow-md">
+                                       <Image
+                                          src={block.content}
+                                          alt="Blog content image"
+                                          fill
+                                          className="object-cover object-top"
+                                       />
+                                    </div>
                                  </div>
                               );
 

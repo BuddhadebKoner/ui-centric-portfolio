@@ -10,6 +10,15 @@ export interface Project {
 
 export const projects: Project[] = [
    {
+      title: "Smart Attendance",
+      description: "A production-grade Android app for managing classroom attendance using QR code scanning and GPS location verification. Teachers create sessions, students scan to mark presence — no proxies, no paper.",
+      demoUrl: "https://github.com/BuddhadebKoner/attendance-native-app/releases/tag/smart-attdence",
+      sourceCodeUrl: "https://github.com/BuddhadebKoner/attendance-native-app",
+      image: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1772308422/Screenshot_20260301_010021_trn3on.jpg",
+      tags: ["Expo", "React Native", "Node.js", "MongoDB", "AWS EC2", "TypeScript"],
+      isNew: true,
+   },
+   {
       title: "Book Your Hotel",
       description: "India's Premier Hotel Booking Platform built with LiteAPI. Explore hotels, search destinations, and confirm bookings seamlessly with real-time availability.",
       demoUrl: "https://bookyourhotel.vercel.app/",
