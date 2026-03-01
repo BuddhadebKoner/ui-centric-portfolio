@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import GoogleAd from "@/components/GoogleAd";
+import { SponsorAdHorizontal } from "@/components/SponsorAd";
 import { blogs } from "@/data/blogs";
 import { useState } from "react";
 
@@ -85,8 +86,8 @@ export default function BlogsPage() {
                   </div>
                </div>
 
-               {/* Horizontal Ad */}
-               <GoogleAd adSlot="2246398380" />
+               {/* Horizontal Sponsor Ad */}
+               <SponsorAdHorizontal sponsorId="devsindia" className="mb-2" />
 
                {/* Blogs Grid */}
                {filteredBlogs.length > 0 ? (

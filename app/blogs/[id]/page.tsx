@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import GoogleAd from "@/components/GoogleAd";
+import { SponsorAdVertical } from "@/components/SponsorAd";
 import { blogs } from "@/data/blogs";
 import { notFound } from "next/navigation";
 import { Share2, Check } from "lucide-react";
@@ -149,7 +150,7 @@ export default function BlogDetailPage() {
                {/* Left Sticky Ad — xl+ only */}
                <aside className="hidden xl:block w-[160px] flex-shrink-0">
                   <div className="sticky top-24 pt-10">
-                     <GoogleAd adSlot="2246398380" variant="sidebar" />
+                     <SponsorAdVertical sponsorId="qrattendee" />
                   </div>
                </aside>
 
@@ -420,7 +421,7 @@ export default function BlogDetailPage() {
                {/* Right Sticky Ad — xl+ only */}
                <aside className="hidden xl:block w-[160px] flex-shrink-0">
                   <div className="sticky top-24 pt-10">
-                     <GoogleAd adSlot="2246398380" variant="sidebar" />
+                     <SponsorAdVertical sponsorId="devsindia" />
                   </div>
                </aside>
 

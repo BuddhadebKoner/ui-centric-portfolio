@@ -6,3 +6,4 @@ export * from "./landing-pages";
 export * from "./tech-stack";
 export * from "./personal-info";
 export * from "./experience";
+export * from "./sponsors";

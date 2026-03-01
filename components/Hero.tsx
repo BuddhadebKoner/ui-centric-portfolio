@@ -21,7 +21,7 @@ export default function Hero() {
                      <br />
                      <span className="text-foreground">and Community</span>
                   </h1>
-
+   
                   {/* Description */}
                   <p className="font-[family-name:var(--font-montserrat)] text-base sm:text-lg md:text-xl lg:text-[20px] font-medium leading-relaxed text-muted-foreground max-w-xl">
                      Building digital experiences that matter —{" "}

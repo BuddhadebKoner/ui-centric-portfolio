@@ -14,6 +14,8 @@ import BlogsSection from "@/components/BlogsSection";
 import { LogoLoop } from "@/components/LogoLoop";
 import RecentBlogPopup from "@/components/RecentBlogPopup";
 import GoogleAd from "@/components/GoogleAd";
+import SponsorAd from "@/components/SponsorAd";
+import { SponsorAdHorizontal } from "@/components/SponsorAd";
 import {
   SiJavascript,
   SiTypescript,
@@ -163,6 +165,9 @@ export default function Home() {
           <ProjectsSection />
           <BlogsSection />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <SponsorAdHorizontal sponsorId="qrattendee" />
+          </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <GoogleAd adSlot="2246398380" />
           </div>
           <YouTubeSection />
@@ -171,6 +176,13 @@ export default function Home() {
           <Footer />
         </main>
       </div>
+
+      {/* Sponsor Ads - stacked in top-right corner */}
+      <div className="fixed top-20 right-4 sm:top-24 sm:right-6 z-40 flex flex-col gap-3 w-[300px]">
+        <SponsorAd sponsorId="devsindia" inline />
+        <SponsorAd sponsorId="qrattendee" inline />
+      </div>
+
 
       {/* Recent Blog Popup */}
       <RecentBlogPopup />
