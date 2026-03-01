@@ -6,6 +6,7 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { blogs } from "@/data/blogs";
 import { notFound } from "next/navigation";
 import { Share2, Check } from "lucide-react";
@@ -143,26 +144,14 @@ export default function BlogDetailPage() {
          {/* Content */}
          <div className="relative pt-12 sm:pt-16">
             <div className="max-w-4xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-10">
-               {/* Back Button */}
-               <Link
-                  href="/blogs"
-                  className="inline-flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors mb-6"
-               >
-                  <svg
-                     className="w-4 h-4 sm:w-5 sm:h-5"
-                     fill="none"
-                     viewBox="0 0 24 24"
-                     stroke="currentColor"
-                  >
-                     <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                     />
-                  </svg>
-                  Back to Blogs
-               </Link>
+               {/* Breadcrumbs */}
+               <Breadcrumbs
+                  items={[
+                     { label: "Home", href: "/" },
+                     { label: "Blogs", href: "/blogs" },
+                     { label: blog.title },
+                  ]}
+               />
 
                {/* Blog Header */}
                <div className="mb-8">

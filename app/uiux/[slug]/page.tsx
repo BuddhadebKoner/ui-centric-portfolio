@@ -5,6 +5,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { use } from "react";
 import Navbar from "@/components/Navbar";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { uiuxProjects } from "@/data/uiux";
 
 export default function UIUXDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -37,26 +38,14 @@ export default function UIUXDetailPage({ params }: { params: Promise<{ slug: str
          {/* Content */}
          <div className="relative pt-12 sm:pt-16">
             <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-10">
-               {/* Back Navigation */}
-               <Link
-                  href="/uiux"
-                  className="inline-flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors mb-6 sm:mb-8"
-               >
-                  <svg
-                     className="w-4 h-4 sm:w-5 sm:h-5"
-                     fill="none"
-                     viewBox="0 0 24 24"
-                     stroke="currentColor"
-                  >
-                     <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                     />
-                  </svg>
-                  Back to UI/UX Portfolio
-               </Link>
+               {/* Breadcrumbs */}
+               <Breadcrumbs
+                  items={[
+                     { label: "Home", href: "/" },
+                     { label: "UI/UX Design", href: "/uiux" },
+                     { label: project.title },
+                  ]}
+               />
 
                {/* Project Header */}
                <div className="mb-8 sm:mb-12">

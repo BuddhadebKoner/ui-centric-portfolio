@@ -62,10 +62,16 @@ export default function Footer() {
       { name: "Contact", href: "#contact" },
    ];
 
+   const legalLinks = [
+      { name: "Terms & Conditions", href: "/terms-and-conditions" },
+      { name: "Privacy Policy", href: "/privacy-policy" },
+      { name: "Disclaimer", href: "/disclaimer" },
+   ];
+
    return (
       <footer id="contact" className="border-t border-border/20 bg-background/5 backdrop-blur-sm">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
                {/* Brand Section */}
                <div className="space-y-4">
                   <h2 className="text-2xl font-bold text-foreground">
@@ -86,6 +92,24 @@ export default function Footer() {
                   </h3>
                   <div className="flex flex-col space-y-3">
                      {quickLinks.map((link, index) => (
+                        <a
+                           key={index}
+                           href={link.href}
+                           className="text-sm text-muted-foreground hover:text-highlight transition-colors"
+                        >
+                           {link.name}
+                        </a>
+                     ))}
+                  </div>
+               </div>
+
+               {/* Legal Section */}
+               <div className="space-y-4">
+                  <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider">
+                     Legal
+                  </h3>
+                  <div className="flex flex-col space-y-3">
+                     {legalLinks.map((link, index) => (
                         <a
                            key={index}
                            href={link.href}

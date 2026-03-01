@@ -49,6 +49,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
          changeFrequency: 'weekly' as const,
          priority: 0.8,
       },
+      {
+         url: `${baseUrl}/terms-and-conditions`,
+         lastModified: new Date(),
+         changeFrequency: 'yearly' as const,
+         priority: 0.3,
+      },
+      {
+         url: `${baseUrl}/privacy-policy`,
+         lastModified: new Date(),
+         changeFrequency: 'yearly' as const,
+         priority: 0.3,
+      },
+      {
+         url: `${baseUrl}/disclaimer`,
+         lastModified: new Date(),
+         changeFrequency: 'yearly' as const,
+         priority: 0.3,
+      },
+      {
+         url: `${baseUrl}/sitemap-page`,
+         lastModified: new Date(),
+         changeFrequency: 'monthly' as const,
+         priority: 0.4,
+      },
    ]
 
    // Blog pages

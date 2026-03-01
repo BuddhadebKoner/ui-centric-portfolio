@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { blogs } from "@/data/blogs";
 import { useState } from "react";
 
@@ -33,28 +34,16 @@ export default function BlogsPage() {
          {/* Content */}
          <div className="relative pt-12 sm:pt-16">
             <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-10">
+               {/* Breadcrumbs */}
+               <Breadcrumbs
+                  items={[
+                     { label: "Home", href: "/" },
+                     { label: "Blogs" },
+                  ]}
+               />
+
                {/* Header */}
                <div className="mb-8 sm:mb-10 md:mb-12">
-                  <Link
-                     href="/"
-                     className="inline-flex items-center gap-1.5 sm:gap-2 text-sm sm:text-base text-muted-foreground hover:text-foreground transition-colors mb-4 sm:mb-6"
-                  >
-                     <svg
-                        className="w-4 h-4 sm:w-5 sm:h-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                     >
-                        <path
-                           strokeLinecap="round"
-                           strokeLinejoin="round"
-                           strokeWidth={2}
-                           d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                        />
-                     </svg>
-                     Back to Home
-                  </Link>
-
                   <div className="space-y-2 sm:space-y-3 md:space-y-4">
                      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
                         Blog Posts
