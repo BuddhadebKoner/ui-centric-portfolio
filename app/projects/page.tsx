@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import GoogleAd from "@/components/GoogleAd";
 import { projects } from "@/data";
 
 export default function ProjectsPage() {
@@ -50,6 +51,9 @@ export default function ProjectsPage() {
                      across various technologies.
                   </p>
                </div>
+
+               {/* Horizontal Ad */}
+               <GoogleAd adSlot="2246398380" />
 
                {/* Projects Grid */}
                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">

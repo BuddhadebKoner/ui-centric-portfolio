@@ -10,18 +10,16 @@ declare global {
 
 interface GoogleAdProps {
    adSlot: string;
-   adFormat?: string;
-   fullWidthResponsive?: boolean;
+   variant?: "horizontal" | "sidebar";
    className?: string;
-   style?: React.CSSProperties;
+   showLabel?: boolean;
 }
 
 export default function GoogleAd({
    adSlot,
-   adFormat = "auto",
-   fullWidthResponsive = true,
+   variant = "horizontal",
    className = "",
-   style = { display: "block" },
+   showLabel = true,
 }: GoogleAdProps) {
    useEffect(() => {
       try {
@@ -31,14 +29,46 @@ export default function GoogleAd({
       }
    }, []);
 
+   if (variant === "sidebar") {
+      return (
+         <div className={`${className}`}>
+            {showLabel && (
+               <p className="text-[10px] text-muted-foreground/40 uppercase tracking-widest text-center mb-1 select-none">
+                  Ad
+               </p>
+            )}
+            <div className="w-[160px] min-h-[600px] overflow-hidden rounded-md bg-card/20 flex items-start justify-center">
+               <ins
+                  className="adsbygoogle"
+                  style={{ display: "block", width: "160px", height: "600px" }}
+                  data-ad-client="ca-pub-7019770614779391"
+                  data-ad-slot={adSlot}
+                  data-ad-format="vertical"
+                  data-full-width-responsive="false"
+               />
+            </div>
+         </div>
+      );
+   }
+
+   // horizontal (default)
    return (
-      <ins
-         className={`adsbygoogle ${className}`}
-         style={style}
-         data-ad-client="ca-pub-7019770614779391"
-         data-ad-slot={adSlot}
-         data-ad-format={adFormat}
-         data-full-width-responsive={fullWidthResponsive ? "true" : "false"}
-      />
+      <div className={`w-full my-6 sm:my-8 ${className}`}>
+         {showLabel && (
+            <p className="text-[10px] text-muted-foreground/40 uppercase tracking-widest text-center mb-1 select-none">
+               Advertisement
+            </p>
+         )}
+         <div className="w-full overflow-hidden rounded-md bg-card/20 min-h-[90px] flex items-center justify-center">
+            <ins
+               className="adsbygoogle w-full"
+               style={{ display: "block" }}
+               data-ad-client="ca-pub-7019770614779391"
+               data-ad-slot={adSlot}
+               data-ad-format="horizontal"
+               data-full-width-responsive="true"
+            />
+         </div>
+      </div>
    );
 }

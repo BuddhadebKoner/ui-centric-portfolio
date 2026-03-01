@@ -13,6 +13,7 @@ import LandingPagesSection from "@/components/LandingPagesSection";
 import BlogsSection from "@/components/BlogsSection";
 import { LogoLoop } from "@/components/LogoLoop";
 import RecentBlogPopup from "@/components/RecentBlogPopup";
+import GoogleAd from "@/components/GoogleAd";
 import {
   SiJavascript,
   SiTypescript,
@@ -161,6 +162,9 @@ export default function Home() {
           <LandingPagesSection />
           <ProjectsSection />
           <BlogsSection />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <GoogleAd adSlot="2246398380" />
+          </div>
           <YouTubeSection />
           <CardsSection />
           <About />

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import GoogleAd from "@/components/GoogleAd";
 import { blogs } from "@/data/blogs";
 import { useState } from "react";
 
@@ -83,6 +84,9 @@ export default function BlogsPage() {
                      </svg>
                   </div>
                </div>
+
+               {/* Horizontal Ad */}
+               <GoogleAd adSlot="2246398380" />
 
                {/* Blogs Grid */}
                {filteredBlogs.length > 0 ? (
