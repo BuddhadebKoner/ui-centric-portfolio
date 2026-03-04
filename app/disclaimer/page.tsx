@@ -95,17 +95,31 @@ export default function DisclaimerPage() {
                   </p>
                </section>
 
-               {/* No Transaction Disclaimer */}
+               {/* Digital Product Purchases */}
                <section className="space-y-3">
                   <h2 className="text-lg font-semibold text-foreground">
-                     4. No Transactions or Refunds
+                     4. Digital Product Purchases & Refunds
                   </h2>
                   <p>
-                     This Website does not offer any products or services for
-                     direct purchase. No financial transactions, payments,
-                     subscriptions, or purchases can be made through this
-                     Website. As such, there is no refund, return, or
-                     cancellation policy applicable to this Website.
+                     This Website offers digital products (source code,
+                     templates, and app codebases) for purchase. Payments are
+                     processed through Razorpay, a third-party payment gateway.
+                     {ownerName} does not directly handle, store, or have access
+                     to your financial information.
+                  </p>
+                  <p>
+                     After payment, you must send a screenshot of your payment
+                     confirmation to{" "}
+                     <a
+                        href={`mailto:${email}`}
+                        className="text-highlight hover:underline"
+                     >
+                        {email}
+                     </a>{" "}
+                     for verification. The source code will be delivered via
+                     email after manual verification. All sales of digital
+                     products are final — no refunds, returns, or cancellations
+                     once the source code has been delivered.
                   </p>
                   <p>
                      Any freelance engagements, project agreements, or services

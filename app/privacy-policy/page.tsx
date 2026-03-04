@@ -115,18 +115,37 @@ export default function PrivacyPolicyPage() {
                   </div>
                </section>
 
-               {/* No Transactions */}
+               {/* Payment Data */}
                <section className="space-y-3">
                   <h2 className="text-lg font-semibold text-foreground">
-                     3. No Financial Data Collection
+                     3. Payment Data & Financial Information
                   </h2>
                   <p>
-                     This website does not collect, store, or process any
-                     financial information, including credit card numbers, bank
-                     account details, or payment information. There is no
-                     e-commerce or payment processing functionality on this
-                     website. No transactions of any kind are conducted through
-                     this platform.
+                     This website processes payments for digital products
+                     (source code, templates, and app codebases) through
+                     Razorpay, a PCI-DSS compliant third-party payment gateway.
+                     When you make a purchase, your payment information
+                     (credit/debit card details, UPI, net banking credentials)
+                     is collected and processed entirely by Razorpay. This
+                     website does not collect, store, or have access to your
+                     financial data.
+                  </p>
+                  <p>
+                     I may receive transaction-level information from Razorpay,
+                     such as your Payment ID, Order ID, payment status, and
+                     email address (if provided during checkout). This
+                     information is used solely for order verification and
+                     product delivery. For details on how Razorpay handles your
+                     data, please refer to{" "}
+                     <a
+                        href="https://razorpay.com/privacy/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-highlight hover:underline"
+                     >
+                        Razorpay&apos;s Privacy Policy
+                     </a>
+                     .
                   </p>
                </section>
 

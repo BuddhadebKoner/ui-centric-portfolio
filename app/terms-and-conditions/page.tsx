@@ -66,15 +66,27 @@ export default function TermsAndConditionsPage() {
                   </p>
                </TermsAccordionSection>
 
-               <TermsAccordionSection number="3" title="No Online Transactions">
+               <TermsAccordionSection number="3" title="Digital Product Purchases & Payments">
                   <p>
-                     This website does not facilitate, process, or handle any
-                     financial transactions, payments, or purchases. There is no
-                     e-commerce functionality, payment gateway, or billing
-                     system integrated into this website. Any business
-                     arrangements or payments for freelance services are handled
-                     separately outside this platform through mutual agreement
-                     between the parties involved.
+                     This website offers digital products such as source code,
+                     templates, and mobile app codebases for purchase.
+                     Payments are processed securely through Razorpay, a
+                     PCI-DSS compliant third-party payment gateway. {ownerName}
+                     does not store or have access to your credit/debit card
+                     details or banking information — all financial data is
+                     handled directly by Razorpay.
+                  </p>
+                  <p>
+                     After a successful payment, you will receive a confirmation
+                     with your Payment ID. To receive the purchased source code,
+                     you must send a screenshot of your payment confirmation to{" "}
+                     <a href={`mailto:${email}`} className="text-highlight hover:underline">
+                        {email}
+                     </a>{" "}
+                     for manual verification. Delivery is handled via email
+                     after verification. All sales of digital products are
+                     final. No refunds are provided once the source code has
+                     been delivered.
                   </p>
                </TermsAccordionSection>
 
