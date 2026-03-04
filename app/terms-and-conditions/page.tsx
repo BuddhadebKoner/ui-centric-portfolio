@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import TermsAccordionSection from "@/components/TermsAccordionSection";
 
 export const metadata: Metadata = {
    title: "Terms and Conditions",
@@ -15,8 +16,8 @@ export default function TermsAndConditionsPage() {
    const email = "iambuddhadebkoner@gmail.com";
 
    return (
-      <main className="min-h-screen bg-background text-foreground">
-         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+      <main className="min-h-screen bg-background text-foreground flex flex-col justify-center">
+         <div className="max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
             <div className="mb-8">
                <Link
                   href="/"
@@ -40,18 +41,11 @@ export default function TermsAndConditionsPage() {
                Last updated: {lastUpdated}
             </p>
 
-            <div className="space-y-10 text-sm leading-relaxed text-muted-foreground">
-               {/* Introduction */}
-               <section className="space-y-3">
-                  <h2 className="text-lg font-semibold text-foreground">
-                     1. Introduction
-                  </h2>
+            <div className="space-y-4">
+               <TermsAccordionSection number="1" title="Introduction">
                   <p>
                      Welcome to {ownerName}&apos;s portfolio website (
-                     <a
-                        href={websiteUrl}
-                        className="text-highlight hover:underline"
-                     >
+                     <a href={websiteUrl} className="text-highlight hover:underline">
                         {websiteUrl}
                      </a>
                      ). By accessing and using this website, you agree to comply
@@ -59,13 +53,9 @@ export default function TermsAndConditionsPage() {
                      you do not agree with any part of these terms, please do not
                      use this website.
                   </p>
-               </section>
+               </TermsAccordionSection>
 
-               {/* Website Purpose */}
-               <section className="space-y-3">
-                  <h2 className="text-lg font-semibold text-foreground">
-                     2. Website Purpose
-                  </h2>
+               <TermsAccordionSection number="2" title="Website Purpose">
                   <p>
                      This website serves as a personal portfolio and
                      informational platform for {ownerName}, a freelance
@@ -74,13 +64,9 @@ export default function TermsAndConditionsPage() {
                      achievements. It is intended for informational and
                      promotional purposes only.
                   </p>
-               </section>
+               </TermsAccordionSection>
 
-               {/* No Transactions */}
-               <section className="space-y-3">
-                  <h2 className="text-lg font-semibold text-foreground">
-                     3. No Online Transactions
-                  </h2>
+               <TermsAccordionSection number="3" title="No Online Transactions">
                   <p>
                      This website does not facilitate, process, or handle any
                      financial transactions, payments, or purchases. There is no
@@ -90,13 +76,9 @@ export default function TermsAndConditionsPage() {
                      separately outside this platform through mutual agreement
                      between the parties involved.
                   </p>
-               </section>
+               </TermsAccordionSection>
 
-               {/* Intellectual Property */}
-               <section className="space-y-3">
-                  <h2 className="text-lg font-semibold text-foreground">
-                     4. Intellectual Property
-                  </h2>
+               <TermsAccordionSection number="4" title="Intellectual Property">
                   <p>
                      All content on this website, including but not limited to
                      text, graphics, logos, images, project showcases, blog
@@ -111,18 +93,12 @@ export default function TermsAndConditionsPage() {
                      this website belong to their respective owners and are used
                      for identification and reference purposes only.
                   </p>
-               </section>
+               </TermsAccordionSection>
 
-               {/* Use of Website */}
-               <section className="space-y-3">
-                  <h2 className="text-lg font-semibold text-foreground">
-                     5. Acceptable Use
-                  </h2>
+               <TermsAccordionSection number="5" title="Acceptable Use">
                   <p>By using this website, you agree not to:</p>
                   <ul className="list-disc list-inside space-y-2 pl-4">
-                     <li>
-                        Use the website for any unlawful or prohibited purpose.
-                     </li>
+                     <li>Use the website for any unlawful or prohibited purpose.</li>
                      <li>
                         Attempt to gain unauthorized access to any part of the
                         website, server, or systems connected to it.
@@ -140,13 +116,9 @@ export default function TermsAndConditionsPage() {
                         contacting through this website.
                      </li>
                   </ul>
-               </section>
+               </TermsAccordionSection>
 
-               {/* Contact Form & Communication */}
-               <section className="space-y-3">
-                  <h2 className="text-lg font-semibold text-foreground">
-                     6. Contact & Communication
-                  </h2>
+               <TermsAccordionSection number="6" title="Contact & Communication">
                   <p>
                      This website may provide means to contact {ownerName} via
                      email or social media links. Any information you provide
@@ -155,13 +127,9 @@ export default function TermsAndConditionsPage() {
                      information will not be shared with third parties, sold, or
                      used for marketing purposes without your explicit consent.
                   </p>
-               </section>
+               </TermsAccordionSection>
 
-               {/* Third-Party Links */}
-               <section className="space-y-3">
-                  <h2 className="text-lg font-semibold text-foreground">
-                     7. Third-Party Links
-                  </h2>
+               <TermsAccordionSection number="7" title="Third-Party Links">
                   <p>
                      This website may contain links to third-party websites,
                      social media profiles, external project repositories (e.g.,
@@ -171,13 +139,9 @@ export default function TermsAndConditionsPage() {
                      the content, privacy policies, or practices of any
                      third-party websites.
                   </p>
-               </section>
+               </TermsAccordionSection>
 
-               {/* Blog Content */}
-               <section className="space-y-3">
-                  <h2 className="text-lg font-semibold text-foreground">
-                     8. Blog & Content Disclaimer
-                  </h2>
+               <TermsAccordionSection number="8" title="Blog & Content Disclaimer">
                   <p>
                      Blog posts and articles published on this website represent
                      the personal opinions and experiences of {ownerName}. While
@@ -187,13 +151,9 @@ export default function TermsAndConditionsPage() {
                      educational purposes and should be independently verified
                      before use in production environments.
                   </p>
-               </section>
+               </TermsAccordionSection>
 
-               {/* Disclaimer of Warranties */}
-               <section className="space-y-3">
-                  <h2 className="text-lg font-semibold text-foreground">
-                     9. Disclaimer of Warranties
-                  </h2>
+               <TermsAccordionSection number="9" title="Disclaimer of Warranties">
                   <p>
                      This website is provided on an &quot;as is&quot; and
                      &quot;as available&quot; basis. {ownerName} makes no
@@ -204,13 +164,9 @@ export default function TermsAndConditionsPage() {
                      merchantability, fitness for a particular purpose, and
                      non-infringement.
                   </p>
-               </section>
+               </TermsAccordionSection>
 
-               {/* Limitation of Liability */}
-               <section className="space-y-3">
-                  <h2 className="text-lg font-semibold text-foreground">
-                     10. Limitation of Liability
-                  </h2>
+               <TermsAccordionSection number="10" title="Limitation of Liability">
                   <p>
                      In no event shall {ownerName} be liable for any direct,
                      indirect, incidental, special, consequential, or punitive
@@ -220,13 +176,9 @@ export default function TermsAndConditionsPage() {
                      losses, even if {ownerName} has been advised of the
                      possibility of such damages.
                   </p>
-               </section>
+               </TermsAccordionSection>
 
-               {/* Changes */}
-               <section className="space-y-3">
-                  <h2 className="text-lg font-semibold text-foreground">
-                     11. Changes to Terms
-                  </h2>
+               <TermsAccordionSection number="11" title="Changes to Terms">
                   <p>
                      {ownerName} reserves the right to modify or update these
                      terms and conditions at any time without prior notice.
@@ -235,13 +187,9 @@ export default function TermsAndConditionsPage() {
                      periodically. Continued use of the website after changes
                      constitutes acceptance of the updated terms.
                   </p>
-               </section>
+               </TermsAccordionSection>
 
-               {/* Governing Law */}
-               <section className="space-y-3">
-                  <h2 className="text-lg font-semibold text-foreground">
-                     12. Governing Law
-                  </h2>
+               <TermsAccordionSection number="12" title="Governing Law">
                   <p>
                      These terms and conditions are governed by and construed in
                      accordance with the laws of India. Any disputes arising
@@ -249,16 +197,10 @@ export default function TermsAndConditionsPage() {
                      exclusive jurisdiction of the courts in Kolkata, West
                      Bengal, India.
                   </p>
-               </section>
+               </TermsAccordionSection>
 
-               {/* Contact */}
-               <section className="space-y-3">
-                  <h2 className="text-lg font-semibold text-foreground">
-                     13. Contact Information
-                  </h2>
-                  <p>
-                     If you have any questions about these terms, please contact:
-                  </p>
+               <TermsAccordionSection number="13" title="Contact Information">
+                  <p>If you have any questions about these terms, please contact:</p>
                   <div className="bg-muted/10 border border-border/20 rounded-lg p-4 space-y-1">
                      <p className="font-medium text-foreground">{ownerName}</p>
                      <p>
@@ -280,7 +222,7 @@ export default function TermsAndConditionsPage() {
                         </a>
                      </p>
                   </div>
-               </section>
+               </TermsAccordionSection>
             </div>
          </div>
       </main>

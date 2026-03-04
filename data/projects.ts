@@ -30,7 +30,7 @@ export const projects: Project[] = [
    {
       title: "E-commerce Platform",
       description: "A comprehensive e-commerce platform with modern UI and seamless user experience.",
-      demoUrl: "https://zidio-project-three.vercel.app/",
+      demoUrl: "https://clothstorefront.vercel.app/",
       sourceCodeUrl: "https://github.com/BuddhadebKoner/zidio-project-three",
       image: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1753897864/Screenshot_2025-07-30_at_23-17-49_E-commerce_turllc.png",
       tags: ["React-v19", "Vite", "TanStack Query", "Tailwind CSS-v4.0"],

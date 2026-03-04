@@ -163,7 +163,7 @@ export const uiuxProjects: MockupProject[] = [
       year: "2024",
       client: "Zidio Development",
       duration: "2 months",
-      demoUrl: "https://zidio-project-three.vercel.app/"
+      demoUrl: "https://clothstorefront.vercel.app/"
    },
    {
       title: "SaaS Landing Page Design",

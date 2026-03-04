@@ -20,7 +20,7 @@ export const landingPages: LandingPage[] = [
       title: "E-commerce Platform",
       url: "zidio-project-three.vercel.app",
       imageSrc: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1753897864/Screenshot_2025-07-30_at_23-17-49_E-commerce_turllc.png",
-      demoUrl: "https://zidio-project-three.vercel.app/",
+      demoUrl: "https://clothstorefront.vercel.app/",
       description: "A comprehensive e-commerce platform with modern UI and seamless user experience.",
       tags: ["React-v19", "Vite", "TanStack Query", "Tailwind CSS-v4.0"],
    },

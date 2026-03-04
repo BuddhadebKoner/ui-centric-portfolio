@@ -1,6 +1,6 @@
 import Image from "next/image";
 import HeroClient, { HeroButtons } from "./HeroClient";
-import SpotifyNowPlaying from "./SpotifyNowPlaying";
+// import SpotifyNowPlaying from "./SpotifyNowPlaying";
 
 export default function Hero() {
    return (
