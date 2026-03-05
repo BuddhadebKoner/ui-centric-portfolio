@@ -87,10 +87,10 @@ export default function ExperienceSection() {
                         <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
                            <Calendar className="w-3.5 h-3.5 flex-shrink-0" />
                            <span>
-                              {new Date(exp.startDate).toLocaleDateString("en-US", { month: "short", year: "numeric" })}
+                              {new Date(exp.startDate + "-02").toLocaleDateString("en-US", { month: "short", year: "numeric" })}
                               {" – "}
                               <span className={`font-semibold ${exp.endDate === "Present" ? "text-highlight" : "text-foreground"}`}>
-                                 {exp.endDate}
+                                 {exp.endDate === "Present" ? "Present" : new Date(exp.endDate + "-02").toLocaleDateString("en-US", { month: "short", year: "numeric" })}
                               </span>
                            </span>
                         </div>
