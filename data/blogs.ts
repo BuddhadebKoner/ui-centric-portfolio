@@ -23,6 +23,140 @@ export interface Blog {
 
 export const blogs: Blog[] = [
    {
+      id: "token-economy-prompts-not-hours",
+      title: "The Token Economy: Why Your Next Salary Might Be Measured in Prompts, Not Hours",
+      excerpt: "A reflection on the growing cost of AI access, why prompt efficiency may become a core job skill, and how token-aware workflows could shape future compensation.",
+      thumbnail: "https://images.unsplash.com/photo-1775994121052-7e653711f72c?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      author: {
+         name: "Buddhadeb Koner",
+         avatar: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1762492868/next-portfolio/xyxj8fdggwypdx2bwdnp.png"
+      },
+      date: "28 Jun 2026",
+      readTime: "7 min read",
+      tags: ["AI", "Prompts", "Productivity", "Token Economy", "Career"],
+      content: [
+         {
+            type: 'text',
+            content: 'A few months ago, I had something I almost took for granted: free access to the best AI models out there. Top-tier models, full capability, no paywall standing between me and serious work. And then, almost overnight, that access started disappearing.'
+         },
+         {
+            type: 'highlight',
+            content: 'What used to feel like an open buffet of AI capability is starting to look more like a metered utility. The free ride is ending.'
+         },
+         {
+            type: 'heading',
+            content: 'The Free Ride Is Ending, and That Is Not an Accident'
+         },
+         {
+            type: 'text',
+            content: 'What is left for free now are mostly the base models, the lighter tiers, the tools that are good enough for casual use but not always enough for serious work. The flagship models are increasingly locked behind subscriptions. AI assistants that used to feel generous are tightening their limits. The pattern feels too broad to dismiss as coincidence.'
+         },
+         {
+            type: 'text',
+            content: 'The economics of running these systems are real. In the early phase, generous access helped people get hooked, experiment, and build habits around AI. That phase was never going to last forever. Now the monetization phase is arriving.'
+         },
+         {
+            type: 'heading',
+            content: 'My Theory: Tokens Will Become the New Currency of Work'
+         },
+         {
+            type: 'text',
+            content: 'If AI access keeps getting more expensive and more rationed, then how efficiently you use AI starts to matter in a very direct way. The person who can solve a task with fewer tokens is not just being clever. They are reducing the cost of producing the same value.'
+         },
+         {
+            type: 'list',
+            content: 'Here is the simplest version of the comparison:',
+            items: [
+               'Developer A reaches the answer through vague prompts, repeated corrections, and lots of context restatement.',
+               'Developer B gets the same outcome with a sharper prompt, clearer intent, and less back-and-forth.',
+               'Same result, but one path consumes fewer tokens and less time.',
+               'At scale, that difference becomes a business cost, not just a personal habit.'
+            ]
+         },
+         {
+            type: 'highlight',
+            content: 'When tokens are metered, prompt efficiency stops being a nice extra. It becomes part of the cost of labor.'
+         },
+         {
+            type: 'heading',
+            content: 'Prompt Quality Becomes Job Quality'
+         },
+         {
+            type: 'text',
+            content: 'I do not think prompting will stay a side skill for long. The better you can frame a problem, strip away noise, preserve necessary context, and ask the right follow-up questions, the more effective you will be. In AI-assisted work, that skill is no longer separate from the job. It is the job.'
+         },
+         {
+            type: 'text',
+            content: 'This is already visible in agentic coding workflows. For a lot of tasks, the work is shifting away from writing every line by hand and toward directing an agent that writes, fixes, tests, and refines. Every interaction costs tokens, so the person who can steer the process cleanly is effectively becoming more productive and more economical.'
+         },
+         {
+            type: 'list',
+            content: 'The same pressure will likely appear across other roles too:',
+            items: [
+               'Writers will be judged by how efficiently they can turn ideas into drafts and revisions.',
+               'Marketers will be judged by how clearly they can generate useful variations and campaigns.',
+               'Analysts will be judged by how well they can ask systems for the right insight the first time.',
+               'Designers will be judged by how precisely they can describe intent and iterate without waste.'
+            ]
+         },
+         {
+            type: 'heading',
+            content: 'Salary as a Function of Efficiency'
+         },
+         {
+            type: 'text',
+            content: 'This is the uncomfortable part: compensation may start tracking token efficiency the way it once tracked hours worked. We moved from measuring time at the desk to measuring output. The next step may be output per unit of AI cost.'
+         },
+         {
+            type: 'text',
+            content: 'That means the worker who treats every prompt as if it is free may start looking expensive compared with the worker who uses AI deliberately, structurally, and sparingly. The same work still gets done, but one approach burns less budget.'
+         },
+         {
+            type: 'highlight',
+            content: 'The person who produces the same value with fewer tokens will likely look better on paper, in performance reviews, and on cost reports.'
+         },
+         {
+            type: 'heading',
+            content: 'What We Should Do About It'
+         },
+         {
+            type: 'text',
+            content: 'I am not claiming this is fully settled. It is a working theory. But if it is even partly true, then preparation matters. The smartest response is to start treating AI usage as a real skill and a measurable habit.'
+         },
+         {
+            type: 'list',
+            content: 'Practical things to start doing now:',
+            items: [
+               'Treat prompting like a trainable skill, not a party trick.',
+               'Practice giving context efficiently and only saying what matters.',
+               'Track your own token usage where possible so you understand your habits.',
+               'Stop assuming AI cost is someone else’s problem if your work depends on it.',
+               'Build workflows that reduce repeated clarification and wasted back-and-forth.'
+            ]
+         },
+         {
+            type: 'heading',
+            content: 'A Closing Thought'
+         },
+         {
+            type: 'text',
+            content: 'Maybe I am wrong. Maybe free tiers come back, competition forces prices down, or access becomes generous again. I hope that happens. But the current direction suggests something else: a future where good work is not only about what you produce, but how efficiently you produce it with AI.'
+         },
+         {
+            type: 'text',
+            content: 'If that future is real, the people who start practicing now will be the ones who adapt fastest. They will know how to treat every prompt like it has a cost, every token like it matters, and every interaction like part of the job instead of an accessory to it.'
+         },
+         {
+            type: 'highlight',
+            content: 'The next advantage may not belong to the person who uses AI the most. It may belong to the person who uses it best.'
+         },
+         {
+            type: 'text',
+            content: 'What do you think? Is this already happening where you work, or am I getting ahead of myself?'
+         }
+      ]
+   },
+   {
       id: "smart-attendance-native-app",
       title: "Smart Attendance: Building a QR-Based Attendance Management System for Android",
       excerpt: "A deep dive into Smart Attendance — a React Native Android application that streamlines classroom attendance using QR code scanning, role-based dashboards, and real-time statistics for teachers and students.",
