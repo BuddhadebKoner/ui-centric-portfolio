@@ -40,6 +40,23 @@ export const techStackLabels: Record<TechStack, string> = {
 
 export const websites: ShopProduct[] = [
    {
+      slug: "quiz-platform",
+      title: "Quiz Platform",
+      description:
+         "An AI-powered EdTech quiz and assessment platform with JWT auth, role-based access, quiz CRUD, student attempts, dashboards, and Groq-generated question support.",
+      thumbnail:
+         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1783757133/quiz_platform_hv9wp4.png",
+      buyers: 0,
+      techStack: ["next-js", "full-stack"],
+      category: "website",
+      priceINR: 100,
+      priceUSD: 1.19,
+      razorpayUrl: "https://rzp.io/rzp/quiz-platform",
+      sourceCodeUrl: "https://github.com/BuddhadebKoner/quiz_platform",
+      livePreviewUrl: "https://playquizmaster.vercel.app/",
+      tags: ["EdTech", "Next.js", "MongoDB", "JWT", "Groq AI"],
+   },
+   {
       slug: "ecommerce-platform",
       title: "E-Commerce Platform",
       description:

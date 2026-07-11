@@ -1,5 +1,5 @@
-import Image from "next/image";
 import HeroClient, { HeroButtons } from "./HeroClient";
+import { DitherShader } from "@/components/ui/dither-shader";
 // import SpotifyNowPlaying from "./SpotifyNowPlaying";
 
 export default function Hero() {
@@ -21,7 +21,7 @@ export default function Hero() {
                      <br />
                      <span className="text-foreground">and Community</span>
                   </h1>
-   
+
                   {/* Description */}
                   <p className="font-[family-name:var(--font-montserrat)] text-base sm:text-lg md:text-xl lg:text-[20px] font-medium leading-relaxed text-muted-foreground max-w-xl">
                      Building digital experiences that matter —{" "}
@@ -38,14 +38,16 @@ export default function Hero() {
                {/* Right Image */}
                <div className="relative lg:block hidden">
                   <div className="relative w-full max-w-lg ml-auto">
-                     <div className="relative overflow-hidden">
-                        <Image
+                     <div className="relative overflow-hidden rounded-2xl border border-border/40 shadow-2xl">
+                        <DitherShader
                            src="https://res.cloudinary.com/dsfztnp9x/image/upload/v1759997435/Picsart_25-10-09_13-33-53-323_vk0dqp.png"
-                           alt="Profile"
-                           width={500}
-                           height={600}
-                           className="w-full h-auto object-cover"
-                           priority
+                           gridSize={1}
+                           ditherMode="bayer"
+                           colorMode="duotone"
+                           primaryColor="#1e3a5f"
+                           secondaryColor="#f0e68c"
+                           threshold={0.45}
+                           className="h-[600px] w-full"
                         />
                      </div>
                   </div>

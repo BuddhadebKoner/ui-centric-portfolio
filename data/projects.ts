@@ -84,6 +84,17 @@ export const projects: Project[] = [
       tags: ["Next.js", "Tailwind CSS", "TypeScript"],
    },
    {
+      title: "Quiz Platform",
+      description:
+         "An AI-powered EdTech quiz platform with auth, quiz management, student attempts, dashboards, and Groq-based question generation.",
+      demoUrl: "https://playquizmaster.vercel.app/",
+      sourceCodeUrl: "https://github.com/BuddhadebKoner/quiz_platform",
+      image:
+         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1783757133/quiz_platform_hv9wp4.png",
+      tags: ["Next.js 16", "MongoDB", "JWT Auth", "Groq AI", "TypeScript"],
+      isNew: true,
+   },
+   {
       title: "MongoDB Aggregation Pipeline",
       description: "A focused learning environment to practice MongoDB aggregation pipelines with Users, Books, and Authors collections.",
       demoUrl: "https://mongodb-aggregation-pipeline-prrp.vercel.app/",

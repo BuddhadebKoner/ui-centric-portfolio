@@ -49,6 +49,16 @@ export const landingPages: LandingPage[] = [
       tags: ["Next.js", "Tailwind CSS", "TypeScript"],
    },
    {
+      title: "Quiz Platform",
+      url: "playquizmaster.vercel.app",
+      imageSrc:
+         "https://res.cloudinary.com/dsfztnp9x/image/upload/v1783757133/quiz_platform_hv9wp4.png",
+      demoUrl: "https://playquizmaster.vercel.app/",
+      description:
+         "AI-powered EdTech quiz and assessment platform with teacher/student flows, automated question generation, and result tracking.",
+      tags: ["EdTech", "Next.js 16", "MongoDB", "JWT Auth", "Groq AI"],
+   },
+   {
       title: "MongoDB Aggregation Pipeline",
       url: "mongodb-aggregation-pipeline-prrp.vercel.app",
       imageSrc: "https://res.cloudinary.com/dsfztnp9x/image/upload/v1760068413/Screenshot_2025-10-10_at_09-23-19_Vite_React_vaapy0.png",

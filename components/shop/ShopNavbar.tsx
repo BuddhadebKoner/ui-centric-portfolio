@@ -69,7 +69,7 @@ export default function ShopNavbar({ onMenuToggle, navbarTop = "2.75rem" }: Shop
             <div className="h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
                {/* Logo */}
                <Link
-                  href="/shop"
+                  href="/"
                   className="text-xl font-bold text-foreground hover:opacity-80 transition-opacity shrink-0"
                >
                   Buddhadeb <span className="text-highlight">Koner</span>
